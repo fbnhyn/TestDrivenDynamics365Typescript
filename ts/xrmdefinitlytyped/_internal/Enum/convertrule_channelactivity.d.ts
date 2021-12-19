@@ -1,0 +1,16 @@
+declare const enum convertrule_channelactivity {
+  Appointment = 4201,
+  Email = 4202,
+  PhoneCall = 4210,
+  Task = 4212,
+  ServiceActivity = 4214,
+  SocialActivity = 4216,
+  CustomerVoicealert = 10278,
+  CustomerVoicesurveyinvite = 10288,
+  CustomerVoicesurveyresponse = 10290,
+  BookingAlert = 10347,
+  ProjectServiceApproval = 10377,
+  Conversation = 10717,
+  Session = 10732,
+  Outboundmessage = 10825,
+}

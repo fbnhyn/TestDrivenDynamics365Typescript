@@ -1,0 +1,17 @@
+declare const enum flowsession_statuscode {
+  NotSpecified = 0,
+  Paused = 1,
+  Running = 2,
+  Waiting = 3,
+  Succeeded = 4,
+  Skipped = 5,
+  Suspended = 6,
+  Cancelled = 7,
+  Failed = 8,
+  Faulted = 9,
+  TimedOut = 10,
+  Aborted = 11,
+  Ignored = 12,
+  Deleted = 13,
+  Terminated = 14,
+}

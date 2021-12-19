@@ -1,0 +1,49 @@
+interface msdyn_callablecontext_msdyn_playbooktemplate_Base extends WebEntity {
+  msdyn_callablecontext_msdyn_playbooktemplateid?: string | null;
+  msdyn_callablecontextid?: string | null;
+  msdyn_playbooktemplateid?: string | null;
+  versionnumber?: number | null;
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Relationships {
+  msdyn_callablecontext_msdyn_playbooktemplate?: msdyn_playbooktemplate_Result[] | null;
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate extends msdyn_callablecontext_msdyn_playbooktemplate_Base, msdyn_callablecontext_msdyn_playbooktemplate_Relationships {
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Create extends msdyn_callablecontext_msdyn_playbooktemplate {
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Update extends msdyn_callablecontext_msdyn_playbooktemplate {
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Select {
+  msdyn_callablecontext_msdyn_playbooktemplateid: WebAttribute<msdyn_callablecontext_msdyn_playbooktemplate_Select, { msdyn_callablecontext_msdyn_playbooktemplateid: string | null }, {  }>;
+  msdyn_callablecontextid: WebAttribute<msdyn_callablecontext_msdyn_playbooktemplate_Select, { msdyn_callablecontextid: string | null }, {  }>;
+  msdyn_playbooktemplateid: WebAttribute<msdyn_callablecontext_msdyn_playbooktemplate_Select, { msdyn_playbooktemplateid: string | null }, {  }>;
+  versionnumber: WebAttribute<msdyn_callablecontext_msdyn_playbooktemplate_Select, { versionnumber: number | null }, {  }>;
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Filter {
+  msdyn_callablecontext_msdyn_playbooktemplateid: XQW.Guid;
+  msdyn_callablecontextid: XQW.Guid;
+  msdyn_playbooktemplateid: XQW.Guid;
+  versionnumber: number;
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Expand {
+  msdyn_callablecontext_msdyn_playbooktemplate: WebExpand<msdyn_callablecontext_msdyn_playbooktemplate_Expand, msdyn_playbooktemplate_Select, msdyn_playbooktemplate_Filter, { msdyn_callablecontext_msdyn_playbooktemplate: msdyn_playbooktemplate_Result[] }>;
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_FormattedResult {
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_Result extends msdyn_callablecontext_msdyn_playbooktemplate_Base, msdyn_callablecontext_msdyn_playbooktemplate_Relationships {
+  "@odata.etag": string;
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_RelatedOne {
+}
+interface msdyn_callablecontext_msdyn_playbooktemplate_RelatedMany {
+  msdyn_callablecontext_msdyn_playbooktemplate: WebMappingRetrieve<msdyn_playbooktemplate_Select,msdyn_playbooktemplate_Expand,msdyn_playbooktemplate_Filter,msdyn_playbooktemplate_Fixed,msdyn_playbooktemplate_Result,msdyn_playbooktemplate_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  msdyn_callablecontext_msdyn_playbooktemplateset: WebMappingRetrieve<msdyn_callablecontext_msdyn_playbooktemplate_Select,msdyn_callablecontext_msdyn_playbooktemplate_Expand,msdyn_callablecontext_msdyn_playbooktemplate_Filter,msdyn_callablecontext_msdyn_playbooktemplate_Fixed,msdyn_callablecontext_msdyn_playbooktemplate_Result,msdyn_callablecontext_msdyn_playbooktemplate_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  msdyn_callablecontext_msdyn_playbooktemplateset: WebMappingRelated<msdyn_callablecontext_msdyn_playbooktemplate_RelatedOne,msdyn_callablecontext_msdyn_playbooktemplate_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  msdyn_callablecontext_msdyn_playbooktemplateset: WebMappingCUDA<msdyn_callablecontext_msdyn_playbooktemplate_Create,msdyn_callablecontext_msdyn_playbooktemplate_Update,msdyn_callablecontext_msdyn_playbooktemplate_Select>;
+}

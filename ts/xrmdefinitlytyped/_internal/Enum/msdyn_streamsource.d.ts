@@ -1,0 +1,16 @@
+declare const enum msdyn_streamsource {
+  MicrosoftTeams = 19241000,
+  WhatsApp = 192300000,
+  LINE = 192310000,
+  WeChat = 192320000,
+  Facebook = 192330000,
+  SMS = 192340000,
+  EntityRecords = 192350000,
+  Twitter = 192350001,
+  Custom = 192350002,
+  Livechat = 192360000,
+  Voice = 192370000,
+  Video = 192380000,
+  Cobrowse = 192390000,
+  Screensharing = 192400000,
+}

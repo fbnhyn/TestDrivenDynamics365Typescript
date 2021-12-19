@@ -1,0 +1,15 @@
+declare const enum msdyn_ocsession_msdyn_closurereason {
+  Default = 192350000,
+  AgentReject = 192350001,
+  AgentTimeout = 192350002,
+  ConversationTimeout = 192350003,
+  AgentClosed = 192350004,
+  ConversationClosed = 192350005,
+  AgentTransfered = 192350006,
+  AgentDisconnected = 192350007,
+  AgentReRouted = 192350008,
+  VirtualAgentClosed = 192350009,
+  AgentTransferToQueue = 192350010,
+  SupervisorAssignToQueue = 192350011,
+  SupervisorTransferToAgent = 192350012,
+}

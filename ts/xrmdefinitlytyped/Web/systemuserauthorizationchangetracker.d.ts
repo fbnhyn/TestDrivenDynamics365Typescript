@@ -1,0 +1,76 @@
+interface SystemUserAuthorizationChangeTracker_Base extends WebEntity {
+  changedon?: Date | null;
+  changedversionnumber?: number | null;
+  computedon?: Date | null;
+  computedversionnumber?: number | null;
+  systemuserid?: string | null;
+}
+interface SystemUserAuthorizationChangeTracker_Relationships {
+  systemuserauthorizationchangetracker_AsyncOperations?: AsyncOperation_Result[] | null;
+  systemuserauthorizationchangetracker_BulkDeleteFailures?: BulkDeleteFailure_Result[] | null;
+  systemuserauthorizationchangetracker_MailboxTrackingFolders?: MailboxTrackingFolder_Result[] | null;
+  systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses?: PrincipalObjectAttributeAccess_Result[] | null;
+  systemuserauthorizationchangetracker_ProcessSession?: ProcessSession_Result[] | null;
+  systemuserauthorizationchangetracker_SyncErrors?: SyncError_Result[] | null;
+  systemuserauthorizationchangetracker_UserEntityInstanceDatas?: UserEntityInstanceData_Result[] | null;
+  systemuserid_userauthztracker?: SystemUser_Result | null;
+}
+interface SystemUserAuthorizationChangeTracker extends SystemUserAuthorizationChangeTracker_Base, SystemUserAuthorizationChangeTracker_Relationships {
+}
+interface SystemUserAuthorizationChangeTracker_Create extends SystemUserAuthorizationChangeTracker {
+  systemuserid_userauthztracker_bind$systemusers?: string | null;
+}
+interface SystemUserAuthorizationChangeTracker_Update extends SystemUserAuthorizationChangeTracker {
+}
+interface SystemUserAuthorizationChangeTracker_Select {
+  changedon: WebAttribute<SystemUserAuthorizationChangeTracker_Select, { changedon: Date | null }, { changedon_formatted?: string }>;
+  changedversionnumber: WebAttribute<SystemUserAuthorizationChangeTracker_Select, { changedversionnumber: number | null }, {  }>;
+  computedon: WebAttribute<SystemUserAuthorizationChangeTracker_Select, { computedon: Date | null }, { computedon_formatted?: string }>;
+  computedversionnumber: WebAttribute<SystemUserAuthorizationChangeTracker_Select, { computedversionnumber: number | null }, {  }>;
+  systemuserid: WebAttribute<SystemUserAuthorizationChangeTracker_Select, { systemuserid: string | null }, {  }>;
+}
+interface SystemUserAuthorizationChangeTracker_Filter {
+  changedon: Date;
+  changedversionnumber: number;
+  computedon: Date;
+  computedversionnumber: number;
+  systemuserid: XQW.Guid;
+}
+interface SystemUserAuthorizationChangeTracker_Expand {
+  systemuserauthorizationchangetracker_AsyncOperations: WebExpand<SystemUserAuthorizationChangeTracker_Expand, AsyncOperation_Select, AsyncOperation_Filter, { systemuserauthorizationchangetracker_AsyncOperations: AsyncOperation_Result[] }>;
+  systemuserauthorizationchangetracker_BulkDeleteFailures: WebExpand<SystemUserAuthorizationChangeTracker_Expand, BulkDeleteFailure_Select, BulkDeleteFailure_Filter, { systemuserauthorizationchangetracker_BulkDeleteFailures: BulkDeleteFailure_Result[] }>;
+  systemuserauthorizationchangetracker_MailboxTrackingFolders: WebExpand<SystemUserAuthorizationChangeTracker_Expand, MailboxTrackingFolder_Select, MailboxTrackingFolder_Filter, { systemuserauthorizationchangetracker_MailboxTrackingFolders: MailboxTrackingFolder_Result[] }>;
+  systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses: WebExpand<SystemUserAuthorizationChangeTracker_Expand, PrincipalObjectAttributeAccess_Select, PrincipalObjectAttributeAccess_Filter, { systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses: PrincipalObjectAttributeAccess_Result[] }>;
+  systemuserauthorizationchangetracker_ProcessSession: WebExpand<SystemUserAuthorizationChangeTracker_Expand, ProcessSession_Select, ProcessSession_Filter, { systemuserauthorizationchangetracker_ProcessSession: ProcessSession_Result[] }>;
+  systemuserauthorizationchangetracker_SyncErrors: WebExpand<SystemUserAuthorizationChangeTracker_Expand, SyncError_Select, SyncError_Filter, { systemuserauthorizationchangetracker_SyncErrors: SyncError_Result[] }>;
+  systemuserauthorizationchangetracker_UserEntityInstanceDatas: WebExpand<SystemUserAuthorizationChangeTracker_Expand, UserEntityInstanceData_Select, UserEntityInstanceData_Filter, { systemuserauthorizationchangetracker_UserEntityInstanceDatas: UserEntityInstanceData_Result[] }>;
+  systemuserid_userauthztracker: WebExpand<SystemUserAuthorizationChangeTracker_Expand, SystemUser_Select, SystemUser_Filter, { systemuserid_userauthztracker: SystemUser_Result }>;
+}
+interface SystemUserAuthorizationChangeTracker_FormattedResult {
+  changedon_formatted?: string;
+  computedon_formatted?: string;
+}
+interface SystemUserAuthorizationChangeTracker_Result extends SystemUserAuthorizationChangeTracker_Base, SystemUserAuthorizationChangeTracker_Relationships {
+  "@odata.etag": string;
+}
+interface SystemUserAuthorizationChangeTracker_RelatedOne {
+  systemuserid_userauthztracker: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+}
+interface SystemUserAuthorizationChangeTracker_RelatedMany {
+  systemuserauthorizationchangetracker_AsyncOperations: WebMappingRetrieve<AsyncOperation_Select,AsyncOperation_Expand,AsyncOperation_Filter,AsyncOperation_Fixed,AsyncOperation_Result,AsyncOperation_FormattedResult>;
+  systemuserauthorizationchangetracker_BulkDeleteFailures: WebMappingRetrieve<BulkDeleteFailure_Select,BulkDeleteFailure_Expand,BulkDeleteFailure_Filter,BulkDeleteFailure_Fixed,BulkDeleteFailure_Result,BulkDeleteFailure_FormattedResult>;
+  systemuserauthorizationchangetracker_MailboxTrackingFolders: WebMappingRetrieve<MailboxTrackingFolder_Select,MailboxTrackingFolder_Expand,MailboxTrackingFolder_Filter,MailboxTrackingFolder_Fixed,MailboxTrackingFolder_Result,MailboxTrackingFolder_FormattedResult>;
+  systemuserauthorizationchangetracker_PrincipalObjectAttributeAccesses: WebMappingRetrieve<PrincipalObjectAttributeAccess_Select,PrincipalObjectAttributeAccess_Expand,PrincipalObjectAttributeAccess_Filter,PrincipalObjectAttributeAccess_Fixed,PrincipalObjectAttributeAccess_Result,PrincipalObjectAttributeAccess_FormattedResult>;
+  systemuserauthorizationchangetracker_ProcessSession: WebMappingRetrieve<ProcessSession_Select,ProcessSession_Expand,ProcessSession_Filter,ProcessSession_Fixed,ProcessSession_Result,ProcessSession_FormattedResult>;
+  systemuserauthorizationchangetracker_SyncErrors: WebMappingRetrieve<SyncError_Select,SyncError_Expand,SyncError_Filter,SyncError_Fixed,SyncError_Result,SyncError_FormattedResult>;
+  systemuserauthorizationchangetracker_UserEntityInstanceDatas: WebMappingRetrieve<UserEntityInstanceData_Select,UserEntityInstanceData_Expand,UserEntityInstanceData_Filter,UserEntityInstanceData_Fixed,UserEntityInstanceData_Result,UserEntityInstanceData_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  systemuserauthorizationchangetrackers: WebMappingRetrieve<SystemUserAuthorizationChangeTracker_Select,SystemUserAuthorizationChangeTracker_Expand,SystemUserAuthorizationChangeTracker_Filter,SystemUserAuthorizationChangeTracker_Fixed,SystemUserAuthorizationChangeTracker_Result,SystemUserAuthorizationChangeTracker_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  systemuserauthorizationchangetrackers: WebMappingRelated<SystemUserAuthorizationChangeTracker_RelatedOne,SystemUserAuthorizationChangeTracker_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  systemuserauthorizationchangetrackers: WebMappingCUDA<SystemUserAuthorizationChangeTracker_Create,SystemUserAuthorizationChangeTracker_Update,SystemUserAuthorizationChangeTracker_Select>;
+}

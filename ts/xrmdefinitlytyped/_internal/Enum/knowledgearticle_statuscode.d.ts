@@ -1,0 +1,16 @@
+declare const enum knowledgearticle_statuscode {
+  Proposed = 1,
+  Draft = 2,
+  Needsreview = 3,
+  Inreview = 4,
+  Approved = 5,
+  Scheduled = 6,
+  Published = 7,
+  Needsreview_2 = 8,
+  Updating = 9,
+  Expired = 10,
+  Rejected = 11,
+  Archived = 12,
+  Discarded = 13,
+  Rejected_2 = 14,
+}

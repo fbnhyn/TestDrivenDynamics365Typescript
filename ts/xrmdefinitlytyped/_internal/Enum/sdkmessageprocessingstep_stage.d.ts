@@ -1,0 +1,15 @@
+declare const enum sdkmessageprocessingstep_stage {
+  InitialPreoperationForinternaluseonly = 5,
+  Prevalidation = 10,
+  InternalPreoperationBeforeExternalPluginsForinternaluseonly = 15,
+  Preoperation = 20,
+  InternalPreoperationAfterExternalPluginsForinternaluseonly = 25,
+  MainOperationForinternaluseonly = 30,
+  InternalPostoperationBeforeExternalPluginsForinternaluseonly = 35,
+  Postoperation = 40,
+  InternalPostoperationAfterExternalPluginsForinternaluseonly = 45,
+  PostoperationDeprecated = 50,
+  FinalPostoperationForinternaluseonly = 55,
+  PreCommitstagefiredbeforetransactioncommitForinternaluseonly = 80,
+  PostCommitstagefiredaftertransactioncommitForinternaluseonly = 90,
+}

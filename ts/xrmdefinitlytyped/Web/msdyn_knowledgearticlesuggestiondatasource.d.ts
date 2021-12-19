@@ -1,0 +1,40 @@
+interface msdyn_knowledgearticlesuggestiondatasource_Base extends WebEntity {
+  msdyn_knowledgearticlesuggestiondatasourceid?: string | null;
+  msdyn_name?: string | null;
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Relationships {
+}
+interface msdyn_knowledgearticlesuggestiondatasource extends msdyn_knowledgearticlesuggestiondatasource_Base, msdyn_knowledgearticlesuggestiondatasource_Relationships {
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Create extends msdyn_knowledgearticlesuggestiondatasource {
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Update extends msdyn_knowledgearticlesuggestiondatasource {
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Select {
+  msdyn_knowledgearticlesuggestiondatasourceid: WebAttribute<msdyn_knowledgearticlesuggestiondatasource_Select, { msdyn_knowledgearticlesuggestiondatasourceid: string | null }, {  }>;
+  msdyn_name: WebAttribute<msdyn_knowledgearticlesuggestiondatasource_Select, { msdyn_name: string | null }, {  }>;
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Filter {
+  msdyn_knowledgearticlesuggestiondatasourceid: XQW.Guid;
+  msdyn_name: string;
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Expand {
+}
+interface msdyn_knowledgearticlesuggestiondatasource_FormattedResult {
+}
+interface msdyn_knowledgearticlesuggestiondatasource_Result extends msdyn_knowledgearticlesuggestiondatasource_Base, msdyn_knowledgearticlesuggestiondatasource_Relationships {
+  "@odata.etag": string;
+}
+interface msdyn_knowledgearticlesuggestiondatasource_RelatedOne {
+}
+interface msdyn_knowledgearticlesuggestiondatasource_RelatedMany {
+}
+interface WebEntitiesRetrieve {
+  msdyn_knowledgearticlesuggestiondatasources: WebMappingRetrieve<msdyn_knowledgearticlesuggestiondatasource_Select,msdyn_knowledgearticlesuggestiondatasource_Expand,msdyn_knowledgearticlesuggestiondatasource_Filter,msdyn_knowledgearticlesuggestiondatasource_Fixed,msdyn_knowledgearticlesuggestiondatasource_Result,msdyn_knowledgearticlesuggestiondatasource_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  msdyn_knowledgearticlesuggestiondatasources: WebMappingRelated<msdyn_knowledgearticlesuggestiondatasource_RelatedOne,msdyn_knowledgearticlesuggestiondatasource_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  msdyn_knowledgearticlesuggestiondatasources: WebMappingCUDA<msdyn_knowledgearticlesuggestiondatasource_Create,msdyn_knowledgearticlesuggestiondatasource_Update,msdyn_knowledgearticlesuggestiondatasource_Select>;
+}

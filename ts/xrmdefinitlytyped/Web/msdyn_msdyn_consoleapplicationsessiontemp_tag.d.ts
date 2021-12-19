@@ -1,0 +1,49 @@
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Base extends WebEntity {
+  msdyn_consoleapplicationsessiontemplateid?: string | null;
+  msdyn_msdyn_consoleapplicationsessiontemp_tagid?: string | null;
+  msdyn_templatetagsid?: string | null;
+  versionnumber?: number | null;
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Relationships {
+  msdyn_msdyn_consoleapplicationsessiontemp_tag?: msdyn_templatetags_Result[] | null;
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag extends msdyn_msdyn_consoleapplicationsessiontemp_tag_Base, msdyn_msdyn_consoleapplicationsessiontemp_tag_Relationships {
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Create extends msdyn_msdyn_consoleapplicationsessiontemp_tag {
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Update extends msdyn_msdyn_consoleapplicationsessiontemp_tag {
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Select {
+  msdyn_consoleapplicationsessiontemplateid: WebAttribute<msdyn_msdyn_consoleapplicationsessiontemp_tag_Select, { msdyn_consoleapplicationsessiontemplateid: string | null }, {  }>;
+  msdyn_msdyn_consoleapplicationsessiontemp_tagid: WebAttribute<msdyn_msdyn_consoleapplicationsessiontemp_tag_Select, { msdyn_msdyn_consoleapplicationsessiontemp_tagid: string | null }, {  }>;
+  msdyn_templatetagsid: WebAttribute<msdyn_msdyn_consoleapplicationsessiontemp_tag_Select, { msdyn_templatetagsid: string | null }, {  }>;
+  versionnumber: WebAttribute<msdyn_msdyn_consoleapplicationsessiontemp_tag_Select, { versionnumber: number | null }, {  }>;
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Filter {
+  msdyn_consoleapplicationsessiontemplateid: XQW.Guid;
+  msdyn_msdyn_consoleapplicationsessiontemp_tagid: XQW.Guid;
+  msdyn_templatetagsid: XQW.Guid;
+  versionnumber: number;
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Expand {
+  msdyn_msdyn_consoleapplicationsessiontemp_tag: WebExpand<msdyn_msdyn_consoleapplicationsessiontemp_tag_Expand, msdyn_templatetags_Select, msdyn_templatetags_Filter, { msdyn_msdyn_consoleapplicationsessiontemp_tag: msdyn_templatetags_Result[] }>;
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_FormattedResult {
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_Result extends msdyn_msdyn_consoleapplicationsessiontemp_tag_Base, msdyn_msdyn_consoleapplicationsessiontemp_tag_Relationships {
+  "@odata.etag": string;
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_RelatedOne {
+}
+interface msdyn_msdyn_consoleapplicationsessiontemp_tag_RelatedMany {
+  msdyn_msdyn_consoleapplicationsessiontemp_tag: WebMappingRetrieve<msdyn_templatetags_Select,msdyn_templatetags_Expand,msdyn_templatetags_Filter,msdyn_templatetags_Fixed,msdyn_templatetags_Result,msdyn_templatetags_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  msdyn_msdyn_consoleapplicationsessiontemp_tagset: WebMappingRetrieve<msdyn_msdyn_consoleapplicationsessiontemp_tag_Select,msdyn_msdyn_consoleapplicationsessiontemp_tag_Expand,msdyn_msdyn_consoleapplicationsessiontemp_tag_Filter,msdyn_msdyn_consoleapplicationsessiontemp_tag_Fixed,msdyn_msdyn_consoleapplicationsessiontemp_tag_Result,msdyn_msdyn_consoleapplicationsessiontemp_tag_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  msdyn_msdyn_consoleapplicationsessiontemp_tagset: WebMappingRelated<msdyn_msdyn_consoleapplicationsessiontemp_tag_RelatedOne,msdyn_msdyn_consoleapplicationsessiontemp_tag_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  msdyn_msdyn_consoleapplicationsessiontemp_tagset: WebMappingCUDA<msdyn_msdyn_consoleapplicationsessiontemp_tag_Create,msdyn_msdyn_consoleapplicationsessiontemp_tag_Update,msdyn_msdyn_consoleapplicationsessiontemp_tag_Select>;
+}

@@ -1,0 +1,49 @@
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Base extends WebEntity {
+  msdyn_consoleapplicationtemplateid?: string | null;
+  msdyn_consoleapplicationtemplateparameterid?: string | null;
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_id?: string | null;
+  versionnumber?: number | null;
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Relationships {
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_co?: msdyn_consoleapplicationtemplateparameter_Result[] | null;
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn_ extends msdyn_msdyn_consoleapplicationtemplate_msdyn__Base, msdyn_msdyn_consoleapplicationtemplate_msdyn__Relationships {
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Create extends msdyn_msdyn_consoleapplicationtemplate_msdyn_ {
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Update extends msdyn_msdyn_consoleapplicationtemplate_msdyn_ {
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Select {
+  msdyn_consoleapplicationtemplateid: WebAttribute<msdyn_msdyn_consoleapplicationtemplate_msdyn__Select, { msdyn_consoleapplicationtemplateid: string | null }, {  }>;
+  msdyn_consoleapplicationtemplateparameterid: WebAttribute<msdyn_msdyn_consoleapplicationtemplate_msdyn__Select, { msdyn_consoleapplicationtemplateparameterid: string | null }, {  }>;
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_id: WebAttribute<msdyn_msdyn_consoleapplicationtemplate_msdyn__Select, { msdyn_msdyn_consoleapplicationtemplate_msdyn_id: string | null }, {  }>;
+  versionnumber: WebAttribute<msdyn_msdyn_consoleapplicationtemplate_msdyn__Select, { versionnumber: number | null }, {  }>;
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Filter {
+  msdyn_consoleapplicationtemplateid: XQW.Guid;
+  msdyn_consoleapplicationtemplateparameterid: XQW.Guid;
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_id: XQW.Guid;
+  versionnumber: number;
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Expand {
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_co: WebExpand<msdyn_msdyn_consoleapplicationtemplate_msdyn__Expand, msdyn_consoleapplicationtemplateparameter_Select, msdyn_consoleapplicationtemplateparameter_Filter, { msdyn_msdyn_consoleapplicationtemplate_msdyn_co: msdyn_consoleapplicationtemplateparameter_Result[] }>;
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__FormattedResult {
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__Result extends msdyn_msdyn_consoleapplicationtemplate_msdyn__Base, msdyn_msdyn_consoleapplicationtemplate_msdyn__Relationships {
+  "@odata.etag": string;
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__RelatedOne {
+}
+interface msdyn_msdyn_consoleapplicationtemplate_msdyn__RelatedMany {
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_co: WebMappingRetrieve<msdyn_consoleapplicationtemplateparameter_Select,msdyn_consoleapplicationtemplateparameter_Expand,msdyn_consoleapplicationtemplateparameter_Filter,msdyn_consoleapplicationtemplateparameter_Fixed,msdyn_consoleapplicationtemplateparameter_Result,msdyn_consoleapplicationtemplateparameter_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_set: WebMappingRetrieve<msdyn_msdyn_consoleapplicationtemplate_msdyn__Select,msdyn_msdyn_consoleapplicationtemplate_msdyn__Expand,msdyn_msdyn_consoleapplicationtemplate_msdyn__Filter,msdyn_msdyn_consoleapplicationtemplate_msdyn__Fixed,msdyn_msdyn_consoleapplicationtemplate_msdyn__Result,msdyn_msdyn_consoleapplicationtemplate_msdyn__FormattedResult>;
+}
+interface WebEntitiesRelated {
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_set: WebMappingRelated<msdyn_msdyn_consoleapplicationtemplate_msdyn__RelatedOne,msdyn_msdyn_consoleapplicationtemplate_msdyn__RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  msdyn_msdyn_consoleapplicationtemplate_msdyn_set: WebMappingCUDA<msdyn_msdyn_consoleapplicationtemplate_msdyn__Create,msdyn_msdyn_consoleapplicationtemplate_msdyn__Update,msdyn_msdyn_consoleapplicationtemplate_msdyn__Select>;
+}

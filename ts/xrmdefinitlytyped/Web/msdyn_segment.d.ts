@@ -1,0 +1,192 @@
+interface msdyn_segment_Base extends WebEntity {
+  createdon?: Date | null;
+  importsequencenumber?: number | null;
+  modifiedon?: Date | null;
+  msdyn_description?: string | null;
+  msdyn_entityfieldname?: string | null;
+  msdyn_entityfilter?: string | null;
+  msdyn_name?: string | null;
+  msdyn_objecttype?: string | null;
+  msdyn_objecttypecode?: msdyn_segment_msdyn_objecttypecode | null;
+  msdyn_segmentid?: string | null;
+  msdyn_triggertype?: msdyn_segment_msdyn_triggertype | null;
+  overriddencreatedon?: Date | null;
+  statecode?: msdyn_segment_statecode | null;
+  statuscode?: msdyn_segment_statuscode | null;
+  timezoneruleversionnumber?: number | null;
+  utcconversiontimezonecode?: number | null;
+  versionnumber?: number | null;
+}
+interface msdyn_segment_Relationships {
+  msdyn_Sequence?: msdyn_sequence_Result | null;
+  msdyn_msdyn_segment_lead?: Lead_Result[] | null;
+  msdyn_msdyn_segment_msdyn_assignmentrule_segment?: msdyn_assignmentrule_Result[] | null;
+  msdyn_msdyn_segment_msdyn_salesroutingrun_segment?: msdyn_salesroutingrun_Result[] | null;
+  msdyn_msdyn_segment_opportunity?: Opportunity_Result[] | null;
+  msdyn_segment_AsyncOperations?: AsyncOperation_Result[] | null;
+  msdyn_segment_BulkDeleteFailures?: BulkDeleteFailure_Result[] | null;
+  msdyn_segment_DuplicateBaseRecord?: DuplicateRecord_Result[] | null;
+  msdyn_segment_DuplicateMatchingRecord?: DuplicateRecord_Result[] | null;
+  msdyn_segment_MailboxTrackingFolders?: MailboxTrackingFolder_Result[] | null;
+  msdyn_segment_PrincipalObjectAttributeAccesses?: PrincipalObjectAttributeAccess_Result[] | null;
+  msdyn_segment_ProcessSession?: ProcessSession_Result[] | null;
+  msdyn_segment_SyncErrors?: SyncError_Result[] | null;
+  msdyn_segment_UserEntityInstanceDatas?: UserEntityInstanceData_Result[] | null;
+  msdyn_segment_msdyn_sequencetarget?: msdyn_sequencetarget_Result[] | null;
+}
+interface msdyn_segment extends msdyn_segment_Base, msdyn_segment_Relationships {
+  msdyn_Sequence_bind$msdyn_sequences?: string | null;
+  ownerid_bind$systemusers?: string | null;
+  ownerid_bind$teams?: string | null;
+}
+interface msdyn_segment_Create extends msdyn_segment {
+}
+interface msdyn_segment_Update extends msdyn_segment {
+}
+interface msdyn_segment_Select {
+  createdby_guid: WebAttribute<msdyn_segment_Select, { createdby_guid: string | null }, { createdby_formatted?: string }>;
+  createdon: WebAttribute<msdyn_segment_Select, { createdon: Date | null }, { createdon_formatted?: string }>;
+  createdonbehalfby_guid: WebAttribute<msdyn_segment_Select, { createdonbehalfby_guid: string | null }, { createdonbehalfby_formatted?: string }>;
+  importsequencenumber: WebAttribute<msdyn_segment_Select, { importsequencenumber: number | null }, {  }>;
+  modifiedby_guid: WebAttribute<msdyn_segment_Select, { modifiedby_guid: string | null }, { modifiedby_formatted?: string }>;
+  modifiedon: WebAttribute<msdyn_segment_Select, { modifiedon: Date | null }, { modifiedon_formatted?: string }>;
+  modifiedonbehalfby_guid: WebAttribute<msdyn_segment_Select, { modifiedonbehalfby_guid: string | null }, { modifiedonbehalfby_formatted?: string }>;
+  msdyn_description: WebAttribute<msdyn_segment_Select, { msdyn_description: string | null }, {  }>;
+  msdyn_entityfieldname: WebAttribute<msdyn_segment_Select, { msdyn_entityfieldname: string | null }, {  }>;
+  msdyn_entityfilter: WebAttribute<msdyn_segment_Select, { msdyn_entityfilter: string | null }, {  }>;
+  msdyn_name: WebAttribute<msdyn_segment_Select, { msdyn_name: string | null }, {  }>;
+  msdyn_objecttype: WebAttribute<msdyn_segment_Select, { msdyn_objecttype: string | null }, {  }>;
+  msdyn_objecttypecode: WebAttribute<msdyn_segment_Select, { msdyn_objecttypecode: msdyn_segment_msdyn_objecttypecode | null }, { msdyn_objecttypecode_formatted?: string }>;
+  msdyn_segmentid: WebAttribute<msdyn_segment_Select, { msdyn_segmentid: string | null }, {  }>;
+  msdyn_sequence_guid: WebAttribute<msdyn_segment_Select, { msdyn_sequence_guid: string | null }, { msdyn_sequence_formatted?: string }>;
+  msdyn_triggertype: WebAttribute<msdyn_segment_Select, { msdyn_triggertype: msdyn_segment_msdyn_triggertype | null }, { msdyn_triggertype_formatted?: string }>;
+  overriddencreatedon: WebAttribute<msdyn_segment_Select, { overriddencreatedon: Date | null }, { overriddencreatedon_formatted?: string }>;
+  ownerid_guid: WebAttribute<msdyn_segment_Select, { ownerid_guid: string | null }, { ownerid_formatted?: string }>;
+  owningbusinessunit_guid: WebAttribute<msdyn_segment_Select, { owningbusinessunit_guid: string | null }, { owningbusinessunit_formatted?: string }>;
+  owningteam_guid: WebAttribute<msdyn_segment_Select, { owningteam_guid: string | null }, { owningteam_formatted?: string }>;
+  owninguser_guid: WebAttribute<msdyn_segment_Select, { owninguser_guid: string | null }, { owninguser_formatted?: string }>;
+  statecode: WebAttribute<msdyn_segment_Select, { statecode: msdyn_segment_statecode | null }, { statecode_formatted?: string }>;
+  statuscode: WebAttribute<msdyn_segment_Select, { statuscode: msdyn_segment_statuscode | null }, { statuscode_formatted?: string }>;
+  timezoneruleversionnumber: WebAttribute<msdyn_segment_Select, { timezoneruleversionnumber: number | null }, {  }>;
+  utcconversiontimezonecode: WebAttribute<msdyn_segment_Select, { utcconversiontimezonecode: number | null }, {  }>;
+  versionnumber: WebAttribute<msdyn_segment_Select, { versionnumber: number | null }, {  }>;
+}
+interface msdyn_segment_Filter {
+  createdby_guid: XQW.Guid;
+  createdon: Date;
+  createdonbehalfby_guid: XQW.Guid;
+  importsequencenumber: number;
+  modifiedby_guid: XQW.Guid;
+  modifiedon: Date;
+  modifiedonbehalfby_guid: XQW.Guid;
+  msdyn_description: string;
+  msdyn_entityfieldname: string;
+  msdyn_entityfilter: string;
+  msdyn_name: string;
+  msdyn_objecttype: string;
+  msdyn_objecttypecode: msdyn_segment_msdyn_objecttypecode;
+  msdyn_segmentid: XQW.Guid;
+  msdyn_sequence_guid: XQW.Guid;
+  msdyn_triggertype: msdyn_segment_msdyn_triggertype;
+  overriddencreatedon: Date;
+  ownerid_guid: XQW.Guid;
+  owningbusinessunit_guid: XQW.Guid;
+  owningteam_guid: XQW.Guid;
+  owninguser_guid: XQW.Guid;
+  statecode: msdyn_segment_statecode;
+  statuscode: msdyn_segment_statuscode;
+  timezoneruleversionnumber: number;
+  utcconversiontimezonecode: number;
+  versionnumber: number;
+}
+interface msdyn_segment_Expand {
+  createdby: WebExpand<msdyn_segment_Expand, SystemUser_Select, SystemUser_Filter, { createdby: SystemUser_Result }>;
+  createdonbehalfby: WebExpand<msdyn_segment_Expand, SystemUser_Select, SystemUser_Filter, { createdonbehalfby: SystemUser_Result }>;
+  modifiedby: WebExpand<msdyn_segment_Expand, SystemUser_Select, SystemUser_Filter, { modifiedby: SystemUser_Result }>;
+  modifiedonbehalfby: WebExpand<msdyn_segment_Expand, SystemUser_Select, SystemUser_Filter, { modifiedonbehalfby: SystemUser_Result }>;
+  msdyn_Sequence: WebExpand<msdyn_segment_Expand, msdyn_sequence_Select, msdyn_sequence_Filter, { msdyn_Sequence: msdyn_sequence_Result }>;
+  msdyn_msdyn_segment_lead: WebExpand<msdyn_segment_Expand, Lead_Select, Lead_Filter, { msdyn_msdyn_segment_lead: Lead_Result[] }>;
+  msdyn_msdyn_segment_msdyn_assignmentrule_segment: WebExpand<msdyn_segment_Expand, msdyn_assignmentrule_Select, msdyn_assignmentrule_Filter, { msdyn_msdyn_segment_msdyn_assignmentrule_segment: msdyn_assignmentrule_Result[] }>;
+  msdyn_msdyn_segment_msdyn_salesroutingrun_segment: WebExpand<msdyn_segment_Expand, msdyn_salesroutingrun_Select, msdyn_salesroutingrun_Filter, { msdyn_msdyn_segment_msdyn_salesroutingrun_segment: msdyn_salesroutingrun_Result[] }>;
+  msdyn_msdyn_segment_opportunity: WebExpand<msdyn_segment_Expand, Opportunity_Select, Opportunity_Filter, { msdyn_msdyn_segment_opportunity: Opportunity_Result[] }>;
+  msdyn_segment_AsyncOperations: WebExpand<msdyn_segment_Expand, AsyncOperation_Select, AsyncOperation_Filter, { msdyn_segment_AsyncOperations: AsyncOperation_Result[] }>;
+  msdyn_segment_BulkDeleteFailures: WebExpand<msdyn_segment_Expand, BulkDeleteFailure_Select, BulkDeleteFailure_Filter, { msdyn_segment_BulkDeleteFailures: BulkDeleteFailure_Result[] }>;
+  msdyn_segment_DuplicateBaseRecord: WebExpand<msdyn_segment_Expand, DuplicateRecord_Select, DuplicateRecord_Filter, { msdyn_segment_DuplicateBaseRecord: DuplicateRecord_Result[] }>;
+  msdyn_segment_DuplicateMatchingRecord: WebExpand<msdyn_segment_Expand, DuplicateRecord_Select, DuplicateRecord_Filter, { msdyn_segment_DuplicateMatchingRecord: DuplicateRecord_Result[] }>;
+  msdyn_segment_MailboxTrackingFolders: WebExpand<msdyn_segment_Expand, MailboxTrackingFolder_Select, MailboxTrackingFolder_Filter, { msdyn_segment_MailboxTrackingFolders: MailboxTrackingFolder_Result[] }>;
+  msdyn_segment_PrincipalObjectAttributeAccesses: WebExpand<msdyn_segment_Expand, PrincipalObjectAttributeAccess_Select, PrincipalObjectAttributeAccess_Filter, { msdyn_segment_PrincipalObjectAttributeAccesses: PrincipalObjectAttributeAccess_Result[] }>;
+  msdyn_segment_ProcessSession: WebExpand<msdyn_segment_Expand, ProcessSession_Select, ProcessSession_Filter, { msdyn_segment_ProcessSession: ProcessSession_Result[] }>;
+  msdyn_segment_SyncErrors: WebExpand<msdyn_segment_Expand, SyncError_Select, SyncError_Filter, { msdyn_segment_SyncErrors: SyncError_Result[] }>;
+  msdyn_segment_UserEntityInstanceDatas: WebExpand<msdyn_segment_Expand, UserEntityInstanceData_Select, UserEntityInstanceData_Filter, { msdyn_segment_UserEntityInstanceDatas: UserEntityInstanceData_Result[] }>;
+  msdyn_segment_msdyn_sequencetarget: WebExpand<msdyn_segment_Expand, msdyn_sequencetarget_Select, msdyn_sequencetarget_Filter, { msdyn_segment_msdyn_sequencetarget: msdyn_sequencetarget_Result[] }>;
+  ownerid: WebExpand<msdyn_segment_Expand, SystemUser_Select & Team_Select, SystemUser_Filter & Team_Filter, { ownerid: SystemUser_Result } & { ownerid: Team_Result }>;
+  owningbusinessunit: WebExpand<msdyn_segment_Expand, BusinessUnit_Select, BusinessUnit_Filter, { owningbusinessunit: BusinessUnit_Result }>;
+  owningteam: WebExpand<msdyn_segment_Expand, Team_Select, Team_Filter, { owningteam: Team_Result }>;
+  owninguser: WebExpand<msdyn_segment_Expand, SystemUser_Select, SystemUser_Filter, { owninguser: SystemUser_Result }>;
+}
+interface msdyn_segment_FormattedResult {
+  createdby_formatted?: string;
+  createdon_formatted?: string;
+  createdonbehalfby_formatted?: string;
+  modifiedby_formatted?: string;
+  modifiedon_formatted?: string;
+  modifiedonbehalfby_formatted?: string;
+  msdyn_objecttypecode_formatted?: string;
+  msdyn_sequence_formatted?: string;
+  msdyn_triggertype_formatted?: string;
+  overriddencreatedon_formatted?: string;
+  ownerid_formatted?: string;
+  owningbusinessunit_formatted?: string;
+  owningteam_formatted?: string;
+  owninguser_formatted?: string;
+  statecode_formatted?: string;
+  statuscode_formatted?: string;
+}
+interface msdyn_segment_Result extends msdyn_segment_Base, msdyn_segment_Relationships {
+  "@odata.etag": string;
+  createdby_guid: string | null;
+  createdonbehalfby_guid: string | null;
+  modifiedby_guid: string | null;
+  modifiedonbehalfby_guid: string | null;
+  msdyn_sequence_guid: string | null;
+  ownerid_guid: string | null;
+  owningbusinessunit_guid: string | null;
+  owningteam_guid: string | null;
+  owninguser_guid: string | null;
+}
+interface msdyn_segment_RelatedOne {
+  createdby: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  createdonbehalfby: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  modifiedby: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  modifiedonbehalfby: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  msdyn_Sequence: WebMappingRetrieve<msdyn_sequence_Select,msdyn_sequence_Expand,msdyn_sequence_Filter,msdyn_sequence_Fixed,msdyn_sequence_Result,msdyn_sequence_FormattedResult>;
+  ownerid: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult> & WebMappingRetrieve<Team_Select,Team_Expand,Team_Filter,Team_Fixed,Team_Result,Team_FormattedResult>;
+  owningbusinessunit: WebMappingRetrieve<BusinessUnit_Select,BusinessUnit_Expand,BusinessUnit_Filter,BusinessUnit_Fixed,BusinessUnit_Result,BusinessUnit_FormattedResult>;
+  owningteam: WebMappingRetrieve<Team_Select,Team_Expand,Team_Filter,Team_Fixed,Team_Result,Team_FormattedResult>;
+  owninguser: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+}
+interface msdyn_segment_RelatedMany {
+  msdyn_msdyn_segment_lead: WebMappingRetrieve<Lead_Select,Lead_Expand,Lead_Filter,Lead_Fixed,Lead_Result,Lead_FormattedResult>;
+  msdyn_msdyn_segment_msdyn_assignmentrule_segment: WebMappingRetrieve<msdyn_assignmentrule_Select,msdyn_assignmentrule_Expand,msdyn_assignmentrule_Filter,msdyn_assignmentrule_Fixed,msdyn_assignmentrule_Result,msdyn_assignmentrule_FormattedResult>;
+  msdyn_msdyn_segment_msdyn_salesroutingrun_segment: WebMappingRetrieve<msdyn_salesroutingrun_Select,msdyn_salesroutingrun_Expand,msdyn_salesroutingrun_Filter,msdyn_salesroutingrun_Fixed,msdyn_salesroutingrun_Result,msdyn_salesroutingrun_FormattedResult>;
+  msdyn_msdyn_segment_opportunity: WebMappingRetrieve<Opportunity_Select,Opportunity_Expand,Opportunity_Filter,Opportunity_Fixed,Opportunity_Result,Opportunity_FormattedResult>;
+  msdyn_segment_AsyncOperations: WebMappingRetrieve<AsyncOperation_Select,AsyncOperation_Expand,AsyncOperation_Filter,AsyncOperation_Fixed,AsyncOperation_Result,AsyncOperation_FormattedResult>;
+  msdyn_segment_BulkDeleteFailures: WebMappingRetrieve<BulkDeleteFailure_Select,BulkDeleteFailure_Expand,BulkDeleteFailure_Filter,BulkDeleteFailure_Fixed,BulkDeleteFailure_Result,BulkDeleteFailure_FormattedResult>;
+  msdyn_segment_DuplicateBaseRecord: WebMappingRetrieve<DuplicateRecord_Select,DuplicateRecord_Expand,DuplicateRecord_Filter,DuplicateRecord_Fixed,DuplicateRecord_Result,DuplicateRecord_FormattedResult>;
+  msdyn_segment_DuplicateMatchingRecord: WebMappingRetrieve<DuplicateRecord_Select,DuplicateRecord_Expand,DuplicateRecord_Filter,DuplicateRecord_Fixed,DuplicateRecord_Result,DuplicateRecord_FormattedResult>;
+  msdyn_segment_MailboxTrackingFolders: WebMappingRetrieve<MailboxTrackingFolder_Select,MailboxTrackingFolder_Expand,MailboxTrackingFolder_Filter,MailboxTrackingFolder_Fixed,MailboxTrackingFolder_Result,MailboxTrackingFolder_FormattedResult>;
+  msdyn_segment_PrincipalObjectAttributeAccesses: WebMappingRetrieve<PrincipalObjectAttributeAccess_Select,PrincipalObjectAttributeAccess_Expand,PrincipalObjectAttributeAccess_Filter,PrincipalObjectAttributeAccess_Fixed,PrincipalObjectAttributeAccess_Result,PrincipalObjectAttributeAccess_FormattedResult>;
+  msdyn_segment_ProcessSession: WebMappingRetrieve<ProcessSession_Select,ProcessSession_Expand,ProcessSession_Filter,ProcessSession_Fixed,ProcessSession_Result,ProcessSession_FormattedResult>;
+  msdyn_segment_SyncErrors: WebMappingRetrieve<SyncError_Select,SyncError_Expand,SyncError_Filter,SyncError_Fixed,SyncError_Result,SyncError_FormattedResult>;
+  msdyn_segment_UserEntityInstanceDatas: WebMappingRetrieve<UserEntityInstanceData_Select,UserEntityInstanceData_Expand,UserEntityInstanceData_Filter,UserEntityInstanceData_Fixed,UserEntityInstanceData_Result,UserEntityInstanceData_FormattedResult>;
+  msdyn_segment_msdyn_sequencetarget: WebMappingRetrieve<msdyn_sequencetarget_Select,msdyn_sequencetarget_Expand,msdyn_sequencetarget_Filter,msdyn_sequencetarget_Fixed,msdyn_sequencetarget_Result,msdyn_sequencetarget_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  msdyn_segments: WebMappingRetrieve<msdyn_segment_Select,msdyn_segment_Expand,msdyn_segment_Filter,msdyn_segment_Fixed,msdyn_segment_Result,msdyn_segment_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  msdyn_segments: WebMappingRelated<msdyn_segment_RelatedOne,msdyn_segment_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  msdyn_segments: WebMappingCUDA<msdyn_segment_Create,msdyn_segment_Update,msdyn_segment_Select>;
+}

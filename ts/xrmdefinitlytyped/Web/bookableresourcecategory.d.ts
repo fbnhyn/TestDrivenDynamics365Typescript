@@ -1,0 +1,271 @@
+interface BookableResourceCategory_Base extends WebEntity {
+  bookableresourcecategoryid?: string | null;
+  createdon?: Date | null;
+  description?: string | null;
+  exchangerate?: number | null;
+  importsequencenumber?: number | null;
+  modifiedon?: Date | null;
+  msdyn_billingtype?: msdyn_billingtype | null;
+  msdyn_targetutilization?: number | null;
+  name?: string | null;
+  overriddencreatedon?: Date | null;
+  statecode?: bookableresourcecategory_statecode | null;
+  statuscode?: bookableresourcecategory_statuscode | null;
+  timezoneruleversionnumber?: number | null;
+  utcconversiontimezonecode?: number | null;
+  versionnumber?: number | null;
+}
+interface BookableResourceCategory_Relationships {
+  BookableResourceCategory_SyncErrors?: SyncError_Result[] | null;
+  bookableresourcecategory_AsyncOperations?: AsyncOperation_Result[] | null;
+  bookableresourcecategory_BulkDeleteFailures?: BulkDeleteFailure_Result[] | null;
+  bookableresourcecategory_DuplicateBaseRecord?: DuplicateRecord_Result[] | null;
+  bookableresourcecategory_DuplicateMatchingRecord?: DuplicateRecord_Result[] | null;
+  bookableresourcecategory_MailboxTrackingFolders?: MailboxTrackingFolder_Result[] | null;
+  bookableresourcecategory_PrincipalObjectAttributeAccesses?: PrincipalObjectAttributeAccess_Result[] | null;
+  bookableresourcecategory_ProcessSession?: ProcessSession_Result[] | null;
+  bookableresourcecategory_UserEntityInstanceDatas?: UserEntityInstanceData_Result[] | null;
+  bookableresourcecategory_bookableresourcecategoryassn_ResourceCategory?: BookableResourceCategoryAssn_Result[] | null;
+  createdbyname?: SystemUser_Result | null;
+  createdonbehalfbyname?: SystemUser_Result | null;
+  modifiedbyname?: SystemUser_Result | null;
+  modifiedonbehalfbyname?: SystemUser_Result | null;
+  msdyn_TransactionCategory?: msdyn_transactioncategory_Result | null;
+  msdyn_bookableresourcecategory_bookableresourcebooking_resourcecategoryid?: BookableResourceBooking_Result[] | null;
+  msdyn_bookableresourcecategory_bookableresourcebookingheader_resourcecategoryid?: BookableResourceBookingHeader_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_actual_ResourceCategory?: msdyn_actual_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_estimateline_ResourceCategory?: msdyn_estimateline_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_fact_ResourceCategory?: msdyn_fact_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_invoicelinetransaction_ResourceCategory?: msdyn_invoicelinetransaction_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_journal_ResourceCategory?: msdyn_journal_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_journalline_ResourceCategory?: msdyn_journalline_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_opportunitylineresourcecategory_ResourceCategory?: msdyn_opportunitylineresourcecategory_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_opportunitylinetransaction_ResourceCategory?: msdyn_opportunitylinetransaction_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_orderlineresourcecategory_ResourceCategory?: msdyn_orderlineresourcecategory_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_orderlinetransaction_ResourceCategory?: msdyn_orderlinetransaction_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_projectapproval_ResourceCategory?: msdyn_projectapproval_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_projectparameter_projectmanagerrole?: msdyn_projectparameter_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_projectparameter_teammemberrole?: msdyn_projectparameter_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_projecttask_ResourceCategoryPricingDimension?: msdyn_projecttask_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_projecttask_resourcecategory?: msdyn_projecttask_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_projectteam_resourcecategory?: msdyn_projectteam_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_quotelineanalyticsbreakdown_ResourceCategory?: msdyn_quotelineanalyticsbreakdown_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_quotelineresourcecategory_ResourceCategory?: msdyn_quotelineresourcecategory_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_quotelinetransaction_ResourceCategory?: msdyn_quotelinetransaction_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_resourcecategorymarkuppricelevel_resourcecategory?: msdyn_resourcecategorymarkuppricelevel_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_resourcecategorypricelevel_ResourceCategory?: msdyn_resourcecategorypricelevel_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_resourcerequest_roleid?: msdyn_resourcerequest_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_rolecompetencyrequirement_resourcecategory?: msdyn_rolecompetencyrequirement_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_roleutilization_role?: msdyn_roleutilization_Result[] | null;
+  msdyn_bookableresourcecategory_msdyn_timeentry_resourceCategory?: msdyn_timeentry_Result[] | null;
+  msdyn_bookableresourcecategory_requirementresourcecategory_ResourceCategory?: msdyn_requirementresourcecategory_Result[] | null;
+  msdyn_bookableresourcecategory_resourcerequirement?: msdyn_resourcerequirement_Result[] | null;
+}
+interface BookableResourceCategory extends BookableResourceCategory_Base, BookableResourceCategory_Relationships {
+  msdyn_TransactionCategory_bind$msdyn_transactioncategories?: string | null;
+  ownerid_bind$systemusers?: string | null;
+  ownerid_bind$teams?: string | null;
+  transactioncurrencyid_bind$transactioncurrencies?: string | null;
+}
+interface BookableResourceCategory_Create extends BookableResourceCategory {
+}
+interface BookableResourceCategory_Update extends BookableResourceCategory {
+}
+interface BookableResourceCategory_Select {
+  bookableresourcecategoryid: WebAttribute<BookableResourceCategory_Select, { bookableresourcecategoryid: string | null }, {  }>;
+  createdby_guid: WebAttribute<BookableResourceCategory_Select, { createdby_guid: string | null }, { createdby_formatted?: string }>;
+  createdon: WebAttribute<BookableResourceCategory_Select, { createdon: Date | null }, { createdon_formatted?: string }>;
+  createdonbehalfby_guid: WebAttribute<BookableResourceCategory_Select, { createdonbehalfby_guid: string | null }, { createdonbehalfby_formatted?: string }>;
+  description: WebAttribute<BookableResourceCategory_Select, { description: string | null }, {  }>;
+  exchangerate: WebAttribute<BookableResourceCategory_Select, { exchangerate: number | null }, {  }>;
+  importsequencenumber: WebAttribute<BookableResourceCategory_Select, { importsequencenumber: number | null }, {  }>;
+  modifiedby_guid: WebAttribute<BookableResourceCategory_Select, { modifiedby_guid: string | null }, { modifiedby_formatted?: string }>;
+  modifiedon: WebAttribute<BookableResourceCategory_Select, { modifiedon: Date | null }, { modifiedon_formatted?: string }>;
+  modifiedonbehalfby_guid: WebAttribute<BookableResourceCategory_Select, { modifiedonbehalfby_guid: string | null }, { modifiedonbehalfby_formatted?: string }>;
+  msdyn_billingtype: WebAttribute<BookableResourceCategory_Select, { msdyn_billingtype: msdyn_billingtype | null }, { msdyn_billingtype_formatted?: string }>;
+  msdyn_targetutilization: WebAttribute<BookableResourceCategory_Select, { msdyn_targetutilization: number | null }, {  }>;
+  msdyn_transactioncategory_guid: WebAttribute<BookableResourceCategory_Select, { msdyn_transactioncategory_guid: string | null }, { msdyn_transactioncategory_formatted?: string }>;
+  name: WebAttribute<BookableResourceCategory_Select, { name: string | null }, {  }>;
+  overriddencreatedon: WebAttribute<BookableResourceCategory_Select, { overriddencreatedon: Date | null }, { overriddencreatedon_formatted?: string }>;
+  ownerid_guid: WebAttribute<BookableResourceCategory_Select, { ownerid_guid: string | null }, { ownerid_formatted?: string }>;
+  owningbusinessunit_guid: WebAttribute<BookableResourceCategory_Select, { owningbusinessunit_guid: string | null }, { owningbusinessunit_formatted?: string }>;
+  owningteam_guid: WebAttribute<BookableResourceCategory_Select, { owningteam_guid: string | null }, { owningteam_formatted?: string }>;
+  owninguser_guid: WebAttribute<BookableResourceCategory_Select, { owninguser_guid: string | null }, { owninguser_formatted?: string }>;
+  statecode: WebAttribute<BookableResourceCategory_Select, { statecode: bookableresourcecategory_statecode | null }, { statecode_formatted?: string }>;
+  statuscode: WebAttribute<BookableResourceCategory_Select, { statuscode: bookableresourcecategory_statuscode | null }, { statuscode_formatted?: string }>;
+  timezoneruleversionnumber: WebAttribute<BookableResourceCategory_Select, { timezoneruleversionnumber: number | null }, {  }>;
+  transactioncurrencyid_guid: WebAttribute<BookableResourceCategory_Select, { transactioncurrencyid_guid: string | null }, { transactioncurrencyid_formatted?: string }>;
+  utcconversiontimezonecode: WebAttribute<BookableResourceCategory_Select, { utcconversiontimezonecode: number | null }, {  }>;
+  versionnumber: WebAttribute<BookableResourceCategory_Select, { versionnumber: number | null }, {  }>;
+}
+interface BookableResourceCategory_Filter {
+  bookableresourcecategoryid: XQW.Guid;
+  createdby_guid: XQW.Guid;
+  createdon: Date;
+  createdonbehalfby_guid: XQW.Guid;
+  description: string;
+  exchangerate: any;
+  importsequencenumber: number;
+  modifiedby_guid: XQW.Guid;
+  modifiedon: Date;
+  modifiedonbehalfby_guid: XQW.Guid;
+  msdyn_billingtype: msdyn_billingtype;
+  msdyn_targetutilization: number;
+  msdyn_transactioncategory_guid: XQW.Guid;
+  name: string;
+  overriddencreatedon: Date;
+  ownerid_guid: XQW.Guid;
+  owningbusinessunit_guid: XQW.Guid;
+  owningteam_guid: XQW.Guid;
+  owninguser_guid: XQW.Guid;
+  statecode: bookableresourcecategory_statecode;
+  statuscode: bookableresourcecategory_statuscode;
+  timezoneruleversionnumber: number;
+  transactioncurrencyid_guid: XQW.Guid;
+  utcconversiontimezonecode: number;
+  versionnumber: number;
+}
+interface BookableResourceCategory_Expand {
+  BookableResourceCategory_SyncErrors: WebExpand<BookableResourceCategory_Expand, SyncError_Select, SyncError_Filter, { BookableResourceCategory_SyncErrors: SyncError_Result[] }>;
+  bookableresourcecategory_AsyncOperations: WebExpand<BookableResourceCategory_Expand, AsyncOperation_Select, AsyncOperation_Filter, { bookableresourcecategory_AsyncOperations: AsyncOperation_Result[] }>;
+  bookableresourcecategory_BulkDeleteFailures: WebExpand<BookableResourceCategory_Expand, BulkDeleteFailure_Select, BulkDeleteFailure_Filter, { bookableresourcecategory_BulkDeleteFailures: BulkDeleteFailure_Result[] }>;
+  bookableresourcecategory_DuplicateBaseRecord: WebExpand<BookableResourceCategory_Expand, DuplicateRecord_Select, DuplicateRecord_Filter, { bookableresourcecategory_DuplicateBaseRecord: DuplicateRecord_Result[] }>;
+  bookableresourcecategory_DuplicateMatchingRecord: WebExpand<BookableResourceCategory_Expand, DuplicateRecord_Select, DuplicateRecord_Filter, { bookableresourcecategory_DuplicateMatchingRecord: DuplicateRecord_Result[] }>;
+  bookableresourcecategory_MailboxTrackingFolders: WebExpand<BookableResourceCategory_Expand, MailboxTrackingFolder_Select, MailboxTrackingFolder_Filter, { bookableresourcecategory_MailboxTrackingFolders: MailboxTrackingFolder_Result[] }>;
+  bookableresourcecategory_PrincipalObjectAttributeAccesses: WebExpand<BookableResourceCategory_Expand, PrincipalObjectAttributeAccess_Select, PrincipalObjectAttributeAccess_Filter, { bookableresourcecategory_PrincipalObjectAttributeAccesses: PrincipalObjectAttributeAccess_Result[] }>;
+  bookableresourcecategory_ProcessSession: WebExpand<BookableResourceCategory_Expand, ProcessSession_Select, ProcessSession_Filter, { bookableresourcecategory_ProcessSession: ProcessSession_Result[] }>;
+  bookableresourcecategory_UserEntityInstanceDatas: WebExpand<BookableResourceCategory_Expand, UserEntityInstanceData_Select, UserEntityInstanceData_Filter, { bookableresourcecategory_UserEntityInstanceDatas: UserEntityInstanceData_Result[] }>;
+  bookableresourcecategory_bookableresourcecategoryassn_ResourceCategory: WebExpand<BookableResourceCategory_Expand, BookableResourceCategoryAssn_Select, BookableResourceCategoryAssn_Filter, { bookableresourcecategory_bookableresourcecategoryassn_ResourceCategory: BookableResourceCategoryAssn_Result[] }>;
+  createdbyname: WebExpand<BookableResourceCategory_Expand, SystemUser_Select, SystemUser_Filter, { createdbyname: SystemUser_Result }>;
+  createdonbehalfbyname: WebExpand<BookableResourceCategory_Expand, SystemUser_Select, SystemUser_Filter, { createdonbehalfbyname: SystemUser_Result }>;
+  modifiedbyname: WebExpand<BookableResourceCategory_Expand, SystemUser_Select, SystemUser_Filter, { modifiedbyname: SystemUser_Result }>;
+  modifiedonbehalfbyname: WebExpand<BookableResourceCategory_Expand, SystemUser_Select, SystemUser_Filter, { modifiedonbehalfbyname: SystemUser_Result }>;
+  msdyn_TransactionCategory: WebExpand<BookableResourceCategory_Expand, msdyn_transactioncategory_Select, msdyn_transactioncategory_Filter, { msdyn_TransactionCategory: msdyn_transactioncategory_Result }>;
+  msdyn_bookableresourcecategory_bookableresourcebooking_resourcecategoryid: WebExpand<BookableResourceCategory_Expand, BookableResourceBooking_Select, BookableResourceBooking_Filter, { msdyn_bookableresourcecategory_bookableresourcebooking_resourcecategoryid: BookableResourceBooking_Result[] }>;
+  msdyn_bookableresourcecategory_bookableresourcebookingheader_resourcecategoryid: WebExpand<BookableResourceCategory_Expand, BookableResourceBookingHeader_Select, BookableResourceBookingHeader_Filter, { msdyn_bookableresourcecategory_bookableresourcebookingheader_resourcecategoryid: BookableResourceBookingHeader_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_actual_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_actual_Select, msdyn_actual_Filter, { msdyn_bookableresourcecategory_msdyn_actual_ResourceCategory: msdyn_actual_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_estimateline_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_estimateline_Select, msdyn_estimateline_Filter, { msdyn_bookableresourcecategory_msdyn_estimateline_ResourceCategory: msdyn_estimateline_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_fact_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_fact_Select, msdyn_fact_Filter, { msdyn_bookableresourcecategory_msdyn_fact_ResourceCategory: msdyn_fact_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_invoicelinetransaction_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_invoicelinetransaction_Select, msdyn_invoicelinetransaction_Filter, { msdyn_bookableresourcecategory_msdyn_invoicelinetransaction_ResourceCategory: msdyn_invoicelinetransaction_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_journal_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_journal_Select, msdyn_journal_Filter, { msdyn_bookableresourcecategory_msdyn_journal_ResourceCategory: msdyn_journal_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_journalline_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_journalline_Select, msdyn_journalline_Filter, { msdyn_bookableresourcecategory_msdyn_journalline_ResourceCategory: msdyn_journalline_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_opportunitylineresourcecategory_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_opportunitylineresourcecategory_Select, msdyn_opportunitylineresourcecategory_Filter, { msdyn_bookableresourcecategory_msdyn_opportunitylineresourcecategory_ResourceCategory: msdyn_opportunitylineresourcecategory_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_opportunitylinetransaction_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_opportunitylinetransaction_Select, msdyn_opportunitylinetransaction_Filter, { msdyn_bookableresourcecategory_msdyn_opportunitylinetransaction_ResourceCategory: msdyn_opportunitylinetransaction_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_orderlineresourcecategory_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_orderlineresourcecategory_Select, msdyn_orderlineresourcecategory_Filter, { msdyn_bookableresourcecategory_msdyn_orderlineresourcecategory_ResourceCategory: msdyn_orderlineresourcecategory_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_orderlinetransaction_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_orderlinetransaction_Select, msdyn_orderlinetransaction_Filter, { msdyn_bookableresourcecategory_msdyn_orderlinetransaction_ResourceCategory: msdyn_orderlinetransaction_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_projectapproval_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_projectapproval_Select, msdyn_projectapproval_Filter, { msdyn_bookableresourcecategory_msdyn_projectapproval_ResourceCategory: msdyn_projectapproval_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_projectparameter_projectmanagerrole: WebExpand<BookableResourceCategory_Expand, msdyn_projectparameter_Select, msdyn_projectparameter_Filter, { msdyn_bookableresourcecategory_msdyn_projectparameter_projectmanagerrole: msdyn_projectparameter_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_projectparameter_teammemberrole: WebExpand<BookableResourceCategory_Expand, msdyn_projectparameter_Select, msdyn_projectparameter_Filter, { msdyn_bookableresourcecategory_msdyn_projectparameter_teammemberrole: msdyn_projectparameter_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_projecttask_ResourceCategoryPricingDimension: WebExpand<BookableResourceCategory_Expand, msdyn_projecttask_Select, msdyn_projecttask_Filter, { msdyn_bookableresourcecategory_msdyn_projecttask_ResourceCategoryPricingDimension: msdyn_projecttask_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_projecttask_resourcecategory: WebExpand<BookableResourceCategory_Expand, msdyn_projecttask_Select, msdyn_projecttask_Filter, { msdyn_bookableresourcecategory_msdyn_projecttask_resourcecategory: msdyn_projecttask_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_projectteam_resourcecategory: WebExpand<BookableResourceCategory_Expand, msdyn_projectteam_Select, msdyn_projectteam_Filter, { msdyn_bookableresourcecategory_msdyn_projectteam_resourcecategory: msdyn_projectteam_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_quotelineanalyticsbreakdown_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_quotelineanalyticsbreakdown_Select, msdyn_quotelineanalyticsbreakdown_Filter, { msdyn_bookableresourcecategory_msdyn_quotelineanalyticsbreakdown_ResourceCategory: msdyn_quotelineanalyticsbreakdown_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_quotelineresourcecategory_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_quotelineresourcecategory_Select, msdyn_quotelineresourcecategory_Filter, { msdyn_bookableresourcecategory_msdyn_quotelineresourcecategory_ResourceCategory: msdyn_quotelineresourcecategory_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_quotelinetransaction_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_quotelinetransaction_Select, msdyn_quotelinetransaction_Filter, { msdyn_bookableresourcecategory_msdyn_quotelinetransaction_ResourceCategory: msdyn_quotelinetransaction_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_resourcecategorymarkuppricelevel_resourcecategory: WebExpand<BookableResourceCategory_Expand, msdyn_resourcecategorymarkuppricelevel_Select, msdyn_resourcecategorymarkuppricelevel_Filter, { msdyn_bookableresourcecategory_msdyn_resourcecategorymarkuppricelevel_resourcecategory: msdyn_resourcecategorymarkuppricelevel_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_resourcecategorypricelevel_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_resourcecategorypricelevel_Select, msdyn_resourcecategorypricelevel_Filter, { msdyn_bookableresourcecategory_msdyn_resourcecategorypricelevel_ResourceCategory: msdyn_resourcecategorypricelevel_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_resourcerequest_roleid: WebExpand<BookableResourceCategory_Expand, msdyn_resourcerequest_Select, msdyn_resourcerequest_Filter, { msdyn_bookableresourcecategory_msdyn_resourcerequest_roleid: msdyn_resourcerequest_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_rolecompetencyrequirement_resourcecategory: WebExpand<BookableResourceCategory_Expand, msdyn_rolecompetencyrequirement_Select, msdyn_rolecompetencyrequirement_Filter, { msdyn_bookableresourcecategory_msdyn_rolecompetencyrequirement_resourcecategory: msdyn_rolecompetencyrequirement_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_roleutilization_role: WebExpand<BookableResourceCategory_Expand, msdyn_roleutilization_Select, msdyn_roleutilization_Filter, { msdyn_bookableresourcecategory_msdyn_roleutilization_role: msdyn_roleutilization_Result[] }>;
+  msdyn_bookableresourcecategory_msdyn_timeentry_resourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_timeentry_Select, msdyn_timeentry_Filter, { msdyn_bookableresourcecategory_msdyn_timeentry_resourceCategory: msdyn_timeentry_Result[] }>;
+  msdyn_bookableresourcecategory_requirementresourcecategory_ResourceCategory: WebExpand<BookableResourceCategory_Expand, msdyn_requirementresourcecategory_Select, msdyn_requirementresourcecategory_Filter, { msdyn_bookableresourcecategory_requirementresourcecategory_ResourceCategory: msdyn_requirementresourcecategory_Result[] }>;
+  msdyn_bookableresourcecategory_resourcerequirement: WebExpand<BookableResourceCategory_Expand, msdyn_resourcerequirement_Select, msdyn_resourcerequirement_Filter, { msdyn_bookableresourcecategory_resourcerequirement: msdyn_resourcerequirement_Result[] }>;
+  ownerid: WebExpand<BookableResourceCategory_Expand, SystemUser_Select & Team_Select, SystemUser_Filter & Team_Filter, { ownerid: SystemUser_Result } & { ownerid: Team_Result }>;
+  owningbusinessunit: WebExpand<BookableResourceCategory_Expand, BusinessUnit_Select, BusinessUnit_Filter, { owningbusinessunit: BusinessUnit_Result }>;
+  owningteam: WebExpand<BookableResourceCategory_Expand, Team_Select, Team_Filter, { owningteam: Team_Result }>;
+  owninguser: WebExpand<BookableResourceCategory_Expand, SystemUser_Select, SystemUser_Filter, { owninguser: SystemUser_Result }>;
+  transactioncurrencyid: WebExpand<BookableResourceCategory_Expand, TransactionCurrency_Select, TransactionCurrency_Filter, { transactioncurrencyid: TransactionCurrency_Result }>;
+}
+interface BookableResourceCategory_FormattedResult {
+  createdby_formatted?: string;
+  createdon_formatted?: string;
+  createdonbehalfby_formatted?: string;
+  modifiedby_formatted?: string;
+  modifiedon_formatted?: string;
+  modifiedonbehalfby_formatted?: string;
+  msdyn_billingtype_formatted?: string;
+  msdyn_transactioncategory_formatted?: string;
+  overriddencreatedon_formatted?: string;
+  ownerid_formatted?: string;
+  owningbusinessunit_formatted?: string;
+  owningteam_formatted?: string;
+  owninguser_formatted?: string;
+  statecode_formatted?: string;
+  statuscode_formatted?: string;
+  transactioncurrencyid_formatted?: string;
+}
+interface BookableResourceCategory_Result extends BookableResourceCategory_Base, BookableResourceCategory_Relationships {
+  "@odata.etag": string;
+  createdby_guid: string | null;
+  createdonbehalfby_guid: string | null;
+  modifiedby_guid: string | null;
+  modifiedonbehalfby_guid: string | null;
+  msdyn_transactioncategory_guid: string | null;
+  ownerid_guid: string | null;
+  owningbusinessunit_guid: string | null;
+  owningteam_guid: string | null;
+  owninguser_guid: string | null;
+  transactioncurrencyid_guid: string | null;
+}
+interface BookableResourceCategory_RelatedOne {
+  createdbyname: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  createdonbehalfbyname: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  modifiedbyname: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  modifiedonbehalfbyname: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  msdyn_TransactionCategory: WebMappingRetrieve<msdyn_transactioncategory_Select,msdyn_transactioncategory_Expand,msdyn_transactioncategory_Filter,msdyn_transactioncategory_Fixed,msdyn_transactioncategory_Result,msdyn_transactioncategory_FormattedResult>;
+  ownerid: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult> & WebMappingRetrieve<Team_Select,Team_Expand,Team_Filter,Team_Fixed,Team_Result,Team_FormattedResult>;
+  owningbusinessunit: WebMappingRetrieve<BusinessUnit_Select,BusinessUnit_Expand,BusinessUnit_Filter,BusinessUnit_Fixed,BusinessUnit_Result,BusinessUnit_FormattedResult>;
+  owningteam: WebMappingRetrieve<Team_Select,Team_Expand,Team_Filter,Team_Fixed,Team_Result,Team_FormattedResult>;
+  owninguser: WebMappingRetrieve<SystemUser_Select,SystemUser_Expand,SystemUser_Filter,SystemUser_Fixed,SystemUser_Result,SystemUser_FormattedResult>;
+  transactioncurrencyid: WebMappingRetrieve<TransactionCurrency_Select,TransactionCurrency_Expand,TransactionCurrency_Filter,TransactionCurrency_Fixed,TransactionCurrency_Result,TransactionCurrency_FormattedResult>;
+}
+interface BookableResourceCategory_RelatedMany {
+  BookableResourceCategory_SyncErrors: WebMappingRetrieve<SyncError_Select,SyncError_Expand,SyncError_Filter,SyncError_Fixed,SyncError_Result,SyncError_FormattedResult>;
+  bookableresourcecategory_AsyncOperations: WebMappingRetrieve<AsyncOperation_Select,AsyncOperation_Expand,AsyncOperation_Filter,AsyncOperation_Fixed,AsyncOperation_Result,AsyncOperation_FormattedResult>;
+  bookableresourcecategory_BulkDeleteFailures: WebMappingRetrieve<BulkDeleteFailure_Select,BulkDeleteFailure_Expand,BulkDeleteFailure_Filter,BulkDeleteFailure_Fixed,BulkDeleteFailure_Result,BulkDeleteFailure_FormattedResult>;
+  bookableresourcecategory_DuplicateBaseRecord: WebMappingRetrieve<DuplicateRecord_Select,DuplicateRecord_Expand,DuplicateRecord_Filter,DuplicateRecord_Fixed,DuplicateRecord_Result,DuplicateRecord_FormattedResult>;
+  bookableresourcecategory_DuplicateMatchingRecord: WebMappingRetrieve<DuplicateRecord_Select,DuplicateRecord_Expand,DuplicateRecord_Filter,DuplicateRecord_Fixed,DuplicateRecord_Result,DuplicateRecord_FormattedResult>;
+  bookableresourcecategory_MailboxTrackingFolders: WebMappingRetrieve<MailboxTrackingFolder_Select,MailboxTrackingFolder_Expand,MailboxTrackingFolder_Filter,MailboxTrackingFolder_Fixed,MailboxTrackingFolder_Result,MailboxTrackingFolder_FormattedResult>;
+  bookableresourcecategory_PrincipalObjectAttributeAccesses: WebMappingRetrieve<PrincipalObjectAttributeAccess_Select,PrincipalObjectAttributeAccess_Expand,PrincipalObjectAttributeAccess_Filter,PrincipalObjectAttributeAccess_Fixed,PrincipalObjectAttributeAccess_Result,PrincipalObjectAttributeAccess_FormattedResult>;
+  bookableresourcecategory_ProcessSession: WebMappingRetrieve<ProcessSession_Select,ProcessSession_Expand,ProcessSession_Filter,ProcessSession_Fixed,ProcessSession_Result,ProcessSession_FormattedResult>;
+  bookableresourcecategory_UserEntityInstanceDatas: WebMappingRetrieve<UserEntityInstanceData_Select,UserEntityInstanceData_Expand,UserEntityInstanceData_Filter,UserEntityInstanceData_Fixed,UserEntityInstanceData_Result,UserEntityInstanceData_FormattedResult>;
+  bookableresourcecategory_bookableresourcecategoryassn_ResourceCategory: WebMappingRetrieve<BookableResourceCategoryAssn_Select,BookableResourceCategoryAssn_Expand,BookableResourceCategoryAssn_Filter,BookableResourceCategoryAssn_Fixed,BookableResourceCategoryAssn_Result,BookableResourceCategoryAssn_FormattedResult>;
+  msdyn_bookableresourcecategory_bookableresourcebooking_resourcecategoryid: WebMappingRetrieve<BookableResourceBooking_Select,BookableResourceBooking_Expand,BookableResourceBooking_Filter,BookableResourceBooking_Fixed,BookableResourceBooking_Result,BookableResourceBooking_FormattedResult>;
+  msdyn_bookableresourcecategory_bookableresourcebookingheader_resourcecategoryid: WebMappingRetrieve<BookableResourceBookingHeader_Select,BookableResourceBookingHeader_Expand,BookableResourceBookingHeader_Filter,BookableResourceBookingHeader_Fixed,BookableResourceBookingHeader_Result,BookableResourceBookingHeader_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_actual_ResourceCategory: WebMappingRetrieve<msdyn_actual_Select,msdyn_actual_Expand,msdyn_actual_Filter,msdyn_actual_Fixed,msdyn_actual_Result,msdyn_actual_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_estimateline_ResourceCategory: WebMappingRetrieve<msdyn_estimateline_Select,msdyn_estimateline_Expand,msdyn_estimateline_Filter,msdyn_estimateline_Fixed,msdyn_estimateline_Result,msdyn_estimateline_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_fact_ResourceCategory: WebMappingRetrieve<msdyn_fact_Select,msdyn_fact_Expand,msdyn_fact_Filter,msdyn_fact_Fixed,msdyn_fact_Result,msdyn_fact_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_invoicelinetransaction_ResourceCategory: WebMappingRetrieve<msdyn_invoicelinetransaction_Select,msdyn_invoicelinetransaction_Expand,msdyn_invoicelinetransaction_Filter,msdyn_invoicelinetransaction_Fixed,msdyn_invoicelinetransaction_Result,msdyn_invoicelinetransaction_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_journal_ResourceCategory: WebMappingRetrieve<msdyn_journal_Select,msdyn_journal_Expand,msdyn_journal_Filter,msdyn_journal_Fixed,msdyn_journal_Result,msdyn_journal_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_journalline_ResourceCategory: WebMappingRetrieve<msdyn_journalline_Select,msdyn_journalline_Expand,msdyn_journalline_Filter,msdyn_journalline_Fixed,msdyn_journalline_Result,msdyn_journalline_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_opportunitylineresourcecategory_ResourceCategory: WebMappingRetrieve<msdyn_opportunitylineresourcecategory_Select,msdyn_opportunitylineresourcecategory_Expand,msdyn_opportunitylineresourcecategory_Filter,msdyn_opportunitylineresourcecategory_Fixed,msdyn_opportunitylineresourcecategory_Result,msdyn_opportunitylineresourcecategory_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_opportunitylinetransaction_ResourceCategory: WebMappingRetrieve<msdyn_opportunitylinetransaction_Select,msdyn_opportunitylinetransaction_Expand,msdyn_opportunitylinetransaction_Filter,msdyn_opportunitylinetransaction_Fixed,msdyn_opportunitylinetransaction_Result,msdyn_opportunitylinetransaction_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_orderlineresourcecategory_ResourceCategory: WebMappingRetrieve<msdyn_orderlineresourcecategory_Select,msdyn_orderlineresourcecategory_Expand,msdyn_orderlineresourcecategory_Filter,msdyn_orderlineresourcecategory_Fixed,msdyn_orderlineresourcecategory_Result,msdyn_orderlineresourcecategory_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_orderlinetransaction_ResourceCategory: WebMappingRetrieve<msdyn_orderlinetransaction_Select,msdyn_orderlinetransaction_Expand,msdyn_orderlinetransaction_Filter,msdyn_orderlinetransaction_Fixed,msdyn_orderlinetransaction_Result,msdyn_orderlinetransaction_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_projectapproval_ResourceCategory: WebMappingRetrieve<msdyn_projectapproval_Select,msdyn_projectapproval_Expand,msdyn_projectapproval_Filter,msdyn_projectapproval_Fixed,msdyn_projectapproval_Result,msdyn_projectapproval_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_projectparameter_projectmanagerrole: WebMappingRetrieve<msdyn_projectparameter_Select,msdyn_projectparameter_Expand,msdyn_projectparameter_Filter,msdyn_projectparameter_Fixed,msdyn_projectparameter_Result,msdyn_projectparameter_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_projectparameter_teammemberrole: WebMappingRetrieve<msdyn_projectparameter_Select,msdyn_projectparameter_Expand,msdyn_projectparameter_Filter,msdyn_projectparameter_Fixed,msdyn_projectparameter_Result,msdyn_projectparameter_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_projecttask_ResourceCategoryPricingDimension: WebMappingRetrieve<msdyn_projecttask_Select,msdyn_projecttask_Expand,msdyn_projecttask_Filter,msdyn_projecttask_Fixed,msdyn_projecttask_Result,msdyn_projecttask_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_projecttask_resourcecategory: WebMappingRetrieve<msdyn_projecttask_Select,msdyn_projecttask_Expand,msdyn_projecttask_Filter,msdyn_projecttask_Fixed,msdyn_projecttask_Result,msdyn_projecttask_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_projectteam_resourcecategory: WebMappingRetrieve<msdyn_projectteam_Select,msdyn_projectteam_Expand,msdyn_projectteam_Filter,msdyn_projectteam_Fixed,msdyn_projectteam_Result,msdyn_projectteam_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_quotelineanalyticsbreakdown_ResourceCategory: WebMappingRetrieve<msdyn_quotelineanalyticsbreakdown_Select,msdyn_quotelineanalyticsbreakdown_Expand,msdyn_quotelineanalyticsbreakdown_Filter,msdyn_quotelineanalyticsbreakdown_Fixed,msdyn_quotelineanalyticsbreakdown_Result,msdyn_quotelineanalyticsbreakdown_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_quotelineresourcecategory_ResourceCategory: WebMappingRetrieve<msdyn_quotelineresourcecategory_Select,msdyn_quotelineresourcecategory_Expand,msdyn_quotelineresourcecategory_Filter,msdyn_quotelineresourcecategory_Fixed,msdyn_quotelineresourcecategory_Result,msdyn_quotelineresourcecategory_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_quotelinetransaction_ResourceCategory: WebMappingRetrieve<msdyn_quotelinetransaction_Select,msdyn_quotelinetransaction_Expand,msdyn_quotelinetransaction_Filter,msdyn_quotelinetransaction_Fixed,msdyn_quotelinetransaction_Result,msdyn_quotelinetransaction_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_resourcecategorymarkuppricelevel_resourcecategory: WebMappingRetrieve<msdyn_resourcecategorymarkuppricelevel_Select,msdyn_resourcecategorymarkuppricelevel_Expand,msdyn_resourcecategorymarkuppricelevel_Filter,msdyn_resourcecategorymarkuppricelevel_Fixed,msdyn_resourcecategorymarkuppricelevel_Result,msdyn_resourcecategorymarkuppricelevel_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_resourcecategorypricelevel_ResourceCategory: WebMappingRetrieve<msdyn_resourcecategorypricelevel_Select,msdyn_resourcecategorypricelevel_Expand,msdyn_resourcecategorypricelevel_Filter,msdyn_resourcecategorypricelevel_Fixed,msdyn_resourcecategorypricelevel_Result,msdyn_resourcecategorypricelevel_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_resourcerequest_roleid: WebMappingRetrieve<msdyn_resourcerequest_Select,msdyn_resourcerequest_Expand,msdyn_resourcerequest_Filter,msdyn_resourcerequest_Fixed,msdyn_resourcerequest_Result,msdyn_resourcerequest_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_rolecompetencyrequirement_resourcecategory: WebMappingRetrieve<msdyn_rolecompetencyrequirement_Select,msdyn_rolecompetencyrequirement_Expand,msdyn_rolecompetencyrequirement_Filter,msdyn_rolecompetencyrequirement_Fixed,msdyn_rolecompetencyrequirement_Result,msdyn_rolecompetencyrequirement_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_roleutilization_role: WebMappingRetrieve<msdyn_roleutilization_Select,msdyn_roleutilization_Expand,msdyn_roleutilization_Filter,msdyn_roleutilization_Fixed,msdyn_roleutilization_Result,msdyn_roleutilization_FormattedResult>;
+  msdyn_bookableresourcecategory_msdyn_timeentry_resourceCategory: WebMappingRetrieve<msdyn_timeentry_Select,msdyn_timeentry_Expand,msdyn_timeentry_Filter,msdyn_timeentry_Fixed,msdyn_timeentry_Result,msdyn_timeentry_FormattedResult>;
+  msdyn_bookableresourcecategory_requirementresourcecategory_ResourceCategory: WebMappingRetrieve<msdyn_requirementresourcecategory_Select,msdyn_requirementresourcecategory_Expand,msdyn_requirementresourcecategory_Filter,msdyn_requirementresourcecategory_Fixed,msdyn_requirementresourcecategory_Result,msdyn_requirementresourcecategory_FormattedResult>;
+  msdyn_bookableresourcecategory_resourcerequirement: WebMappingRetrieve<msdyn_resourcerequirement_Select,msdyn_resourcerequirement_Expand,msdyn_resourcerequirement_Filter,msdyn_resourcerequirement_Fixed,msdyn_resourcerequirement_Result,msdyn_resourcerequirement_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  bookableresourcecategories: WebMappingRetrieve<BookableResourceCategory_Select,BookableResourceCategory_Expand,BookableResourceCategory_Filter,BookableResourceCategory_Fixed,BookableResourceCategory_Result,BookableResourceCategory_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  bookableresourcecategories: WebMappingRelated<BookableResourceCategory_RelatedOne,BookableResourceCategory_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  bookableresourcecategories: WebMappingCUDA<BookableResourceCategory_Create,BookableResourceCategory_Update,BookableResourceCategory_Select>;
+}

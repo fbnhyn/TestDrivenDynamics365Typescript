@@ -1,0 +1,49 @@
+interface msdyn_msdyn_consoleapplicationnotificationtag_Base extends WebEntity {
+  msdyn_consoleapplicationnotificationtemplateid?: string | null;
+  msdyn_msdyn_consoleapplicationnotificationtagid?: string | null;
+  msdyn_templatetagsid?: string | null;
+  versionnumber?: number | null;
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Relationships {
+  msdyn_msdyn_consoleapplicationnotificationtag?: msdyn_templatetags_Result[] | null;
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag extends msdyn_msdyn_consoleapplicationnotificationtag_Base, msdyn_msdyn_consoleapplicationnotificationtag_Relationships {
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Create extends msdyn_msdyn_consoleapplicationnotificationtag {
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Update extends msdyn_msdyn_consoleapplicationnotificationtag {
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Select {
+  msdyn_consoleapplicationnotificationtemplateid: WebAttribute<msdyn_msdyn_consoleapplicationnotificationtag_Select, { msdyn_consoleapplicationnotificationtemplateid: string | null }, {  }>;
+  msdyn_msdyn_consoleapplicationnotificationtagid: WebAttribute<msdyn_msdyn_consoleapplicationnotificationtag_Select, { msdyn_msdyn_consoleapplicationnotificationtagid: string | null }, {  }>;
+  msdyn_templatetagsid: WebAttribute<msdyn_msdyn_consoleapplicationnotificationtag_Select, { msdyn_templatetagsid: string | null }, {  }>;
+  versionnumber: WebAttribute<msdyn_msdyn_consoleapplicationnotificationtag_Select, { versionnumber: number | null }, {  }>;
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Filter {
+  msdyn_consoleapplicationnotificationtemplateid: XQW.Guid;
+  msdyn_msdyn_consoleapplicationnotificationtagid: XQW.Guid;
+  msdyn_templatetagsid: XQW.Guid;
+  versionnumber: number;
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Expand {
+  msdyn_msdyn_consoleapplicationnotificationtag: WebExpand<msdyn_msdyn_consoleapplicationnotificationtag_Expand, msdyn_templatetags_Select, msdyn_templatetags_Filter, { msdyn_msdyn_consoleapplicationnotificationtag: msdyn_templatetags_Result[] }>;
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_FormattedResult {
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_Result extends msdyn_msdyn_consoleapplicationnotificationtag_Base, msdyn_msdyn_consoleapplicationnotificationtag_Relationships {
+  "@odata.etag": string;
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_RelatedOne {
+}
+interface msdyn_msdyn_consoleapplicationnotificationtag_RelatedMany {
+  msdyn_msdyn_consoleapplicationnotificationtag: WebMappingRetrieve<msdyn_templatetags_Select,msdyn_templatetags_Expand,msdyn_templatetags_Filter,msdyn_templatetags_Fixed,msdyn_templatetags_Result,msdyn_templatetags_FormattedResult>;
+}
+interface WebEntitiesRetrieve {
+  msdyn_msdyn_consoleapplicationnotificationtagset: WebMappingRetrieve<msdyn_msdyn_consoleapplicationnotificationtag_Select,msdyn_msdyn_consoleapplicationnotificationtag_Expand,msdyn_msdyn_consoleapplicationnotificationtag_Filter,msdyn_msdyn_consoleapplicationnotificationtag_Fixed,msdyn_msdyn_consoleapplicationnotificationtag_Result,msdyn_msdyn_consoleapplicationnotificationtag_FormattedResult>;
+}
+interface WebEntitiesRelated {
+  msdyn_msdyn_consoleapplicationnotificationtagset: WebMappingRelated<msdyn_msdyn_consoleapplicationnotificationtag_RelatedOne,msdyn_msdyn_consoleapplicationnotificationtag_RelatedMany>;
+}
+interface WebEntitiesCUDA {
+  msdyn_msdyn_consoleapplicationnotificationtagset: WebMappingCUDA<msdyn_msdyn_consoleapplicationnotificationtag_Create,msdyn_msdyn_consoleapplicationnotificationtag_Update,msdyn_msdyn_consoleapplicationnotificationtag_Select>;
+}

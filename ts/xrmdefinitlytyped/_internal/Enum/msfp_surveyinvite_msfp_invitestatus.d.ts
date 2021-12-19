@@ -1,0 +1,16 @@
+declare const enum msfp_surveyinvite_msfp_invitestatus {
+  Queued = 647390000,
+  UnSubscribed = 647390001,
+  Sent = 647390002,
+  Responded = 647390003,
+  Failed = 647390004,
+  Created = 647390005,
+  Read = 647390006,
+  Started = 647390007,
+  Delayed = 647390008,
+  Reminderscheduled = 647390009,
+  Remindersent = 647390010,
+  Reminderfailed = 647390011,
+  Reminderinprogress = 647390012,
+  Skipped = 647390013,
+}

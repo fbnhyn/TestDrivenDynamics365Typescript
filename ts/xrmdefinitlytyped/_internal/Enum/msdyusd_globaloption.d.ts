@@ -1,0 +1,15 @@
+declare const enum msdyusd_globaloption {
+  ClientCacheVersionNumber = 100000000,
+  CRMUIBaseUrl = 100000001,
+  HelpImproveUSD = 100000002,
+  maxNumberOfSessions = 100000003,
+  ProcessTerminationThreshold = 100000004,
+  ShowScriptErrors = 100000005,
+  IEProcessKeyboardShortcut = 100000006,
+  DiagnosticsConfiguration = 100000007,
+  PanelNavigationShortcut = 100000008,
+  PopupNavigationShortcut = 100000009,
+  ShowNPSDialog = 100000010,
+  InternetExplorerPooling = 100000011,
+  Others = 1000000040,
+}

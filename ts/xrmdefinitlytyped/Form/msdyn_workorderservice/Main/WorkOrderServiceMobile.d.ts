@@ -1,0 +1,215 @@
+declare namespace Form.msdyn_workorderservice.Main {
+  namespace WorkOrderServiceMobile {
+    namespace Tabs {
+      interface fstab_estimate extends Xrm.SectionCollectionBase {
+        get(name: "fstab_estimate_section_cost"): Xrm.PageSection;
+        get(name: "fstab_estimate_section_sale"): Xrm.PageSection;
+        get(name: string): undefined;
+        get(): Xrm.PageSection[];
+        get(index: number): Xrm.PageSection;
+        get(chooser: (item: Xrm.PageSection, index: number) => boolean): Xrm.PageSection[];
+      }
+      interface fstab_general extends Xrm.SectionCollectionBase {
+        get(name: "fstab_general_section_5"): Xrm.PageSection;
+        get(name: "fstab_general_section_description"): Xrm.PageSection;
+        get(name: "fstab_general_section_general"): Xrm.PageSection;
+        get(name: "fstab_general_section_misc"): Xrm.PageSection;
+        get(name: "fstab_sub_grids_section"): Xrm.PageSection;
+        get(name: string): undefined;
+        get(): Xrm.PageSection[];
+        get(index: number): Xrm.PageSection;
+        get(chooser: (item: Xrm.PageSection, index: number) => boolean): Xrm.PageSection[];
+      }
+      interface fstab_pricing extends Xrm.SectionCollectionBase {
+        get(name: "fstab_pricing_section_cost"): Xrm.PageSection;
+        get(name: "fstab_pricing_section_minimum_charge"): Xrm.PageSection;
+        get(name: "fstab_pricing_section_sale"): Xrm.PageSection;
+        get(name: string): undefined;
+        get(): Xrm.PageSection[];
+        get(index: number): Xrm.PageSection;
+        get(chooser: (item: Xrm.PageSection, index: number) => boolean): Xrm.PageSection[];
+      }
+    }
+    interface Attributes extends Xrm.AttributeCollectionBase {
+      get(name: "msdyn_additionalcost"): Xrm.NumberAttribute;
+      get(name: "msdyn_booking"): Xrm.LookupAttribute<"bookableresourcebooking">;
+      get(name: "msdyn_commissioncosts"): Xrm.NumberAttribute;
+      get(name: "msdyn_customerasset"): Xrm.LookupAttribute<"msdyn_customerasset">;
+      get(name: "msdyn_description"): Xrm.Attribute<string>;
+      get(name: "msdyn_disableentitlement"): Xrm.OptionSetAttribute<boolean>;
+      get(name: "msdyn_discountamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_discountpercent"): Xrm.NumberAttribute;
+      get(name: "msdyn_duration"): Xrm.NumberAttribute;
+      get(name: "msdyn_durationtobill"): Xrm.NumberAttribute;
+      get(name: "msdyn_entitlement"): Xrm.LookupAttribute<"entitlement">;
+      get(name: "msdyn_estimatediscountamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimatediscountpercent"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimateduration"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimatesubtotal"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimatetotalamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimatetotalcost"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimateunitamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_estimateunitcost"): Xrm.NumberAttribute;
+      get(name: "msdyn_internaldescription"): Xrm.Attribute<string>;
+      get(name: "msdyn_lineorder"): Xrm.NumberAttribute;
+      get(name: "msdyn_linestatus"): Xrm.Attribute<any>;
+      get(name: "msdyn_minimumchargeamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_minimumchargeduration"): Xrm.NumberAttribute;
+      get(name: "msdyn_name"): Xrm.Attribute<string>;
+      get(name: "msdyn_pricelist"): Xrm.LookupAttribute<"pricelevel">;
+      get(name: "msdyn_service"): Xrm.LookupAttribute<"product">;
+      get(name: "msdyn_subtotal"): Xrm.NumberAttribute;
+      get(name: "msdyn_taxable"): Xrm.OptionSetAttribute<boolean>;
+      get(name: "msdyn_totalamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_totalcost"): Xrm.NumberAttribute;
+      get(name: "msdyn_unit"): Xrm.LookupAttribute<"uom">;
+      get(name: "msdyn_unitamount"): Xrm.NumberAttribute;
+      get(name: "msdyn_unitcost"): Xrm.NumberAttribute;
+      get(name: "msdyn_workorder"): Xrm.LookupAttribute<"msdyn_workorder">;
+      get(name: "msdyn_workorderincident"): Xrm.LookupAttribute<"msdyn_workorderincident">;
+      get(name: "ownerid"): Xrm.LookupAttribute<"systemuser" | "team">;
+      get(name: "transactioncurrencyid"): Xrm.LookupAttribute<"transactioncurrency">;
+      get(name: string): undefined;
+      get(): Xrm.Attribute<any>[];
+      get(index: number): Xrm.Attribute<any>;
+      get(chooser: (item: Xrm.Attribute<any>, index: number) => boolean): Xrm.Attribute<any>[];
+    }
+    interface Controls extends Xrm.ControlCollectionBase {
+      get(name: "msdyn_additionalcost"): Xrm.NumberControl;
+      get(name: "msdyn_booking"): Xrm.LookupControl<"bookableresourcebooking">;
+      get(name: "msdyn_commissioncosts"): Xrm.NumberControl;
+      get(name: "msdyn_customerasset"): Xrm.LookupControl<"msdyn_customerasset">;
+      get(name: "msdyn_description"): Xrm.StringControl;
+      get(name: "msdyn_disableentitlement"): Xrm.OptionSetControl<boolean>;
+      get(name: "msdyn_discountamount"): Xrm.NumberControl;
+      get(name: "msdyn_discountpercent"): Xrm.NumberControl;
+      get(name: "msdyn_duration"): Xrm.NumberControl;
+      get(name: "msdyn_durationtobill"): Xrm.NumberControl;
+      get(name: "msdyn_entitlement"): Xrm.LookupControl<"entitlement">;
+      get(name: "msdyn_estimatediscountamount"): Xrm.NumberControl;
+      get(name: "msdyn_estimatediscountpercent"): Xrm.NumberControl;
+      get(name: "msdyn_estimateduration"): Xrm.NumberControl;
+      get(name: "msdyn_estimatesubtotal"): Xrm.NumberControl;
+      get(name: "msdyn_estimatetotalamount"): Xrm.NumberControl;
+      get(name: "msdyn_estimatetotalcost"): Xrm.NumberControl;
+      get(name: "msdyn_estimateunitamount"): Xrm.NumberControl;
+      get(name: "msdyn_estimateunitcost"): Xrm.NumberControl;
+      get(name: "msdyn_internaldescription"): Xrm.StringControl;
+      get(name: "msdyn_lineorder"): Xrm.NumberControl;
+      get(name: "msdyn_linestatus"): Xrm.Control<Xrm.Attribute<any>>;
+      get(name: "msdyn_minimumchargeamount"): Xrm.NumberControl;
+      get(name: "msdyn_minimumchargeduration"): Xrm.NumberControl;
+      get(name: "msdyn_name"): Xrm.StringControl;
+      get(name: "msdyn_pricelist"): Xrm.LookupControl<"pricelevel">;
+      get(name: "msdyn_service"): Xrm.LookupControl<"product">;
+      get(name: "msdyn_subtotal"): Xrm.NumberControl;
+      get(name: "msdyn_taxable"): Xrm.OptionSetControl<boolean>;
+      get(name: "msdyn_totalamount"): Xrm.NumberControl;
+      get(name: "msdyn_totalcost"): Xrm.NumberControl;
+      get(name: "msdyn_unit"): Xrm.LookupControl<"uom">;
+      get(name: "msdyn_unitamount"): Xrm.NumberControl;
+      get(name: "msdyn_unitcost"): Xrm.NumberControl;
+      get(name: "msdyn_workorder"): Xrm.LookupControl<"msdyn_workorder">;
+      get(name: "msdyn_workorderincident"): Xrm.LookupControl<"msdyn_workorderincident">;
+      get(name: "notescontrol"): Xrm.BaseControl;
+      get(name: "ownerid"): Xrm.LookupControl<"systemuser" | "team">;
+      get(name: "transactioncurrencyid"): Xrm.LookupControl<"transactioncurrency">;
+      get(name: string): undefined;
+      get(): Xrm.BaseControl[];
+      get(index: number): Xrm.BaseControl;
+      get(chooser: (item: Xrm.BaseControl, index: number) => boolean): Xrm.BaseControl[];
+    }
+    interface Tabs extends Xrm.TabCollectionBase {
+      get(name: "fstab_estimate"): Xrm.PageTab<Tabs.fstab_estimate>;
+      get(name: "fstab_general"): Xrm.PageTab<Tabs.fstab_general>;
+      get(name: "fstab_pricing"): Xrm.PageTab<Tabs.fstab_pricing>;
+      get(name: string): undefined;
+      get(): Xrm.PageTab<Xrm.Collection<Xrm.PageSection>>[];
+      get(index: number): Xrm.PageTab<Xrm.Collection<Xrm.PageSection>>;
+      get(chooser: (item: Xrm.PageTab<Xrm.Collection<Xrm.PageSection>>, index: number) => boolean): Xrm.PageTab<Xrm.Collection<Xrm.PageSection>>[];
+    }
+  }
+  interface WorkOrderServiceMobile extends Xrm.PageBase<WorkOrderServiceMobile.Attributes,WorkOrderServiceMobile.Tabs,WorkOrderServiceMobile.Controls> {
+    getAttribute(attributeName: "msdyn_additionalcost"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_booking"): Xrm.LookupAttribute<"bookableresourcebooking">;
+    getAttribute(attributeName: "msdyn_commissioncosts"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_customerasset"): Xrm.LookupAttribute<"msdyn_customerasset">;
+    getAttribute(attributeName: "msdyn_description"): Xrm.Attribute<string>;
+    getAttribute(attributeName: "msdyn_disableentitlement"): Xrm.OptionSetAttribute<boolean>;
+    getAttribute(attributeName: "msdyn_discountamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_discountpercent"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_duration"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_durationtobill"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_entitlement"): Xrm.LookupAttribute<"entitlement">;
+    getAttribute(attributeName: "msdyn_estimatediscountamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimatediscountpercent"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimateduration"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimatesubtotal"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimatetotalamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimatetotalcost"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimateunitamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_estimateunitcost"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_internaldescription"): Xrm.Attribute<string>;
+    getAttribute(attributeName: "msdyn_lineorder"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_linestatus"): Xrm.Attribute<any>;
+    getAttribute(attributeName: "msdyn_minimumchargeamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_minimumchargeduration"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_name"): Xrm.Attribute<string>;
+    getAttribute(attributeName: "msdyn_pricelist"): Xrm.LookupAttribute<"pricelevel">;
+    getAttribute(attributeName: "msdyn_service"): Xrm.LookupAttribute<"product">;
+    getAttribute(attributeName: "msdyn_subtotal"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_taxable"): Xrm.OptionSetAttribute<boolean>;
+    getAttribute(attributeName: "msdyn_totalamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_totalcost"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_unit"): Xrm.LookupAttribute<"uom">;
+    getAttribute(attributeName: "msdyn_unitamount"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_unitcost"): Xrm.NumberAttribute;
+    getAttribute(attributeName: "msdyn_workorder"): Xrm.LookupAttribute<"msdyn_workorder">;
+    getAttribute(attributeName: "msdyn_workorderincident"): Xrm.LookupAttribute<"msdyn_workorderincident">;
+    getAttribute(attributeName: "ownerid"): Xrm.LookupAttribute<"systemuser" | "team">;
+    getAttribute(attributeName: "transactioncurrencyid"): Xrm.LookupAttribute<"transactioncurrency">;
+    getAttribute(attributeName: string): undefined;
+    getAttribute(delegateFunction: Xrm.Collection.MatchingDelegate<Xrm.Attribute<any>>): Xrm.Attribute<any>[];
+    getControl(controlName: "msdyn_additionalcost"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_booking"): Xrm.LookupControl<"bookableresourcebooking">;
+    getControl(controlName: "msdyn_commissioncosts"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_customerasset"): Xrm.LookupControl<"msdyn_customerasset">;
+    getControl(controlName: "msdyn_description"): Xrm.StringControl;
+    getControl(controlName: "msdyn_disableentitlement"): Xrm.OptionSetControl<boolean>;
+    getControl(controlName: "msdyn_discountamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_discountpercent"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_duration"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_durationtobill"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_entitlement"): Xrm.LookupControl<"entitlement">;
+    getControl(controlName: "msdyn_estimatediscountamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimatediscountpercent"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimateduration"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimatesubtotal"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimatetotalamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimatetotalcost"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimateunitamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_estimateunitcost"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_internaldescription"): Xrm.StringControl;
+    getControl(controlName: "msdyn_lineorder"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_linestatus"): Xrm.Control<Xrm.Attribute<any>>;
+    getControl(controlName: "msdyn_minimumchargeamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_minimumchargeduration"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_name"): Xrm.StringControl;
+    getControl(controlName: "msdyn_pricelist"): Xrm.LookupControl<"pricelevel">;
+    getControl(controlName: "msdyn_service"): Xrm.LookupControl<"product">;
+    getControl(controlName: "msdyn_subtotal"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_taxable"): Xrm.OptionSetControl<boolean>;
+    getControl(controlName: "msdyn_totalamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_totalcost"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_unit"): Xrm.LookupControl<"uom">;
+    getControl(controlName: "msdyn_unitamount"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_unitcost"): Xrm.NumberControl;
+    getControl(controlName: "msdyn_workorder"): Xrm.LookupControl<"msdyn_workorder">;
+    getControl(controlName: "msdyn_workorderincident"): Xrm.LookupControl<"msdyn_workorderincident">;
+    getControl(controlName: "notescontrol"): Xrm.BaseControl;
+    getControl(controlName: "ownerid"): Xrm.LookupControl<"systemuser" | "team">;
+    getControl(controlName: "transactioncurrencyid"): Xrm.LookupControl<"transactioncurrency">;
+    getControl(controlName: string): undefined;
+    getControl(delegateFunction: Xrm.Collection.MatchingDelegate<Xrm.Control<any>>): Xrm.Control<any>[];
+  }
+}
