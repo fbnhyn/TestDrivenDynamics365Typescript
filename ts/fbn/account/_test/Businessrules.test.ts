@@ -5,7 +5,6 @@ import { XrmMockGenerator } from "xrm-mock";
 test("Should hide name", () => {
   XrmMockGenerator.initialise();
   XrmMockGenerator.Attribute.createString("name");
-  XrmMockGenerator.Attribute.createString("fax", "123456");
   const formContext = XrmMockGenerator.getFormContext() as Form.account.Main.Account;
   let accountBusinessrules = new Fbn.Account.Businessrules(formContext);
   accountBusinessrules.showName();
