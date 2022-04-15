@@ -1,6 +1,6 @@
-import { Fbn as _fbn } from "./DataServcie";
+import { DataService } from "../../DataServcie";
 
-export namespace Fbn.Account {
+export namespace Account {
   export namespace FormInjection {
     export namespace Main {
       export function inject(form: Form.account.Main.Account) {
@@ -24,7 +24,7 @@ export namespace Fbn.Account {
     }
     async showNameWithApiCall() {
       let ctrl = this.form.getControl("name");
-      const account = await _fbn.Account.DataService.GetById(this.form.data.entity.getId());
+      const account = await DataService.GetById(this.form.data.entity.getId());
       ctrl.setVisible(account.name != '');
     }
   }

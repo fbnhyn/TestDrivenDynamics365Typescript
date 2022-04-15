@@ -11,4 +11,4 @@ xrm-mock is used to generate a mocked formcontext.
 
 1. Run npm install 
 2. Press F5 and have debugging
-3. Optional add a ``XrmDefinitely.exe.config`` file to add ``d.ts`` files for your dynamics tenant  
+3. Optional add a ``XrmDefinitely.exe.config`` file to add ``d.ts`` files for your dynamics tenant
