@@ -17,6 +17,6 @@ export class Account {
   async showNameWithApiCall() {
     let ctrl = this.form.getControl("name");
     const account = await DataService.GetById(this.form.data.entity.getId());
-    ctrl.setVisible(account.name != "");
+    ctrl.setVisible(!!!account.name);
   }
 }

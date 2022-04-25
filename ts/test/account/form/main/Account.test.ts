@@ -22,15 +22,20 @@ test("Should show name", () => {
   expect(actual.getVisible()).toBe(true);
 });
 
-test("Should show name with api call", () => {
-  DataService.GetById = jest.fn().mockImplementationOnce(() => {
-    return { name: "lufthansa" };
+describe("Should show name with api call", () => {
+  beforeEach(() => {
+    DataService.GetById = jest.fn().mockImplementationOnce(() => {
+      return { name: "lufthansa" };
+    });
+    XrmMockGenerator.initialise();
+    XrmMockGenerator.Attribute.createString("name", "lufthansa");
   });
-  XrmMockGenerator.initialise();
-  XrmMockGenerator.Attribute.createString("name", "lufthansa");
-  const formContext = XrmMockGenerator.getFormContext() as Form.account.Main.Account;
-  let accountBusinessrules = new Account(formContext);
-  accountBusinessrules.showNameWithApiCall();
-  const actual = formContext.getControl("name");
-  expect(actual.getVisible()).toBe(true);
+  
+  it("Show name control", () => {
+    const formContext = XrmMockGenerator.getFormContext() as Form.account.Main.Account;
+    let accountBusinessrules = new Account(formContext);
+    accountBusinessrules.showNameWithApiCall();
+    const actual = formContext.getControl("name");
+    expect(actual.getVisible()).toBe(true);
+  })
 });

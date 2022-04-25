@@ -1,3 +1,7 @@
-node_modules
-XrmDefinitelyTyped.exe.config
+# Folders
 .vs
+node_modules
+coverage
+
+# Files
+XrmDefinitelyTyped.exe.config
